@@ -2,7 +2,7 @@
 
 Audit date: 2026-10-18. Scope: public repository inventory, available source/documentation, fresh portfolio clone, executed smoke run, known-format history scan, and GitHub Actions. Scores award only demonstrated criteria. Unverified items receive zero; zero does not necessarily mean defective. The special profile README repository is not a software project and is exempt from the runnable-project rubric.
 
-## Flagship score: 7/10 verified
+## Flagship score: 8/10 verified
 
 | # | Criterion | Score | Evidence / remaining gap |
 |---|---|---:|---|
@@ -14,16 +14,16 @@ Audit date: 2026-10-18. Scope: public repository inventory, available source/doc
 | 6 | Architecture / decisions | 1 | README diagram and docs/decisions.md |
 | 7 | Measured results | 1 | 17,379 real observations; 18 model runs; 54 fault-policy evaluations |
 | 8 | License, topics, description | 0 | MIT code license present; repository description and topics absent |
-| 9 | No secrets or junk | 0 | No tracked build/cache junk; five known credential-pattern families found zero matches across 13 reachable commits. Broader secret scanning is still unverified, so this is not certified as zero secrets. |
+| 9 | No secrets or junk | 1 | No tracked build/cache junk. Gitleaks v8.24.2 default rules scanned all 15 reachable commits locally with no findings; CI also scans reachable history with fully redacted output. A passing scanner is not proof against unknown credential formats or unreachable history. |
 | 10 | Tagged release and roadmap | 0 | Roadmap/changelog present; fresh clone has no version tag |
 
-Docker build/run remains unverified. The under-five-minute claim applies to the dependency-free smoke path in the recorded environment. The full scientific evaluation installs dependencies and takes longer. A score is a rubric result, not a percentile ranking or career guarantee.
+A dedicated CI job now builds and starts the Compose API, verifies HTTP behavior/non-root UID, and runs system tests inside the image. Check the linked workflow result before treating Docker execution as verified. The under-five-minute claim applies to the dependency-free smoke path in the recorded environment. The full scientific evaluation installs dependencies and takes longer. A score is a rubric result, not a percentile ranking or career guarantee.
 
 ## Public repository triage
 
 | Repository | Verified state | Conservative score / action |
 |---|---|---|
-| Sunnyvulli.github.io | Working portfolio and flagship implementation | 7/10; primary candidate after remaining checks |
+| Sunnyvulli.github.io | Working portfolio and flagship implementation | 8/10; remaining metadata and release gaps documented |
 | Sunnyvulli | Six-line professional profile README | Profile infrastructure; exempt |
 | DBSGITHUBTRAINING | Title-only README and sample.txt | 0 verified rubric points; archive candidate |
 | Actvity_6_Datasets | Dataset CSVs, title-only README, no runnable project | 0 verified rubric points; archive/retain privately as coursework candidate |
@@ -42,9 +42,12 @@ These are conservative evidence scores, not exhaustive code/security reviews. No
 ## Ordered next work
 
 1. Merge the clean-run/formatter/decision-log change only after PR CI passes.
-2. Add a dedicated secret scanner with auditable configuration and perform full-history review.
+2. Keep the dedicated Gitleaks history scan passing; review findings without posting secret values.
 3. Set repository description/topics and create an actual version tag/release using supported authenticated settings.
 4. Archive the specifically identified non-portfolio repositories after owner review of this list; prefer recoverable archival over deletion.
 5. Develop distinct backend/cloud/tool projects to the same standard before selecting four to six pins. Do not split one project into multiple repositories to inflate the count.
 6. Confirm professional photo, LinkedIn, certification URLs, and substantiated employer metrics with the owner.
 7. Re-audit after 30 days, then monthly, including a fresh clone and the 60-second visitor test.
+
+## Security/container follow-up
+Gitleaks v8.24.2 official Linux archive checksum verified against its release checksums. Local scan: 15 reachable commits, no findings. Seven system tests now include missing-database HTTP 503 with no accidental file creation. Container execution is verified by the dedicated CI job rather than inferred from the Dockerfile.

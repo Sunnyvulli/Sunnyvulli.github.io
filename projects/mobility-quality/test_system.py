@@ -56,6 +56,22 @@ class SystemTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             run(p, self.db)
 
+    def test_missing_database_returns_503_without_creating_file(self):
+        missing = Path(self.tmp.name) / "missing.sqlite"
+        server = HTTPServer(("127.0.0.1", 0), Handler)
+        server.database = missing
+        worker = threading.Thread(target=server.serve_forever, daemon=True)
+        worker.start()
+        try:
+            with self.assertRaises(urllib.error.HTTPError) as error:
+                urllib.request.urlopen(f"http://127.0.0.1:{server.server_port}/health")
+            self.assertEqual(error.exception.code, 503)
+            self.assertFalse(missing.exists())
+        finally:
+            server.shutdown()
+            server.server_close()
+            worker.join()
+
     def test_actual_http(self):
         run(self.source, self.db)
         s = HTTPServer(("127.0.0.1", 0), Handler)

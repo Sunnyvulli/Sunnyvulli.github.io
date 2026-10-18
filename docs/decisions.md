@@ -16,4 +16,7 @@
 **Status:** accepted. **Decision:** report chronological and shuffled splits separately, compare a mean baseline and fixed forest, and deliberately expose target-component leakage as a negative methodological example. **Trade-off:** clear case-study evidence versus insufficient rolling-origin/multi-dataset validation. Observed weather makes this retrospective estimation, not future demand forecasting.
 
 ## ADR 006: Dependency-free smoke path; separate research environment
-**Status:** accepted. **Decision:** `make run` exercises ingestion twice and six system tests in an isolated temporary database. Pinned scientific dependencies are needed only for model evaluation. **Trade-off:** quick verification of core behavior versus a longer full study reproduction. Docker remains an optional configuration until its build is executed and checked.
+**Status:** accepted. **Decision:** `make run` exercises ingestion twice and six system tests in an isolated temporary database. Pinned scientific dependencies are needed only for model evaluation. **Trade-off:** quick verification of core behavior versus a longer full study reproduction. Docker validation is tracked in the dedicated container CI job.
+
+## ADR 007: Local container isolation and scanner visibility
+**Status:** accepted. **Decision:** run the API as UID 10001 with read-only storage and loopback-only host publishing; open SQLite in read-only mode. Scan all reachable Git history with Gitleaks v8.24.2 using default rules and fully redacted output. **Trade-off:** straightforward reproducibility and inspectable checks, but no scanner can prove that every possible secret is absent. Scanning does not revoke compromised credentials, and a local container is not a cloud deployment.

@@ -17,3 +17,9 @@
 
 ## Next engineering milestone
 Whole-day rolling-origin evaluation with a lag-aware seasonal baseline, then broader source validation. Do not replace substantive work with cosmetic daily commits.
+
+## Security and container iteration
+- Added explicit SQLite read-only access and a missing-snapshot HTTP regression test; seven system tests pass locally.
+- Verified official Gitleaks archive checksum and scanned 15 reachable commits locally with no findings.
+- Added default-rule, redacted full-history scanning and actual non-root Compose build/API/system tests in CI.
+- Current conservative rubric score: 8/10; metadata and semantic version release remain incomplete.
