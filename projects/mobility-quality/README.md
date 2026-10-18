@@ -7,7 +7,7 @@ Reporting and prediction systems can produce plausible numbers even when inputs 
 
 ## One-command verification
 
-From the repository root, run `make run` (Python 3.11+ and GNU Make required). This exercises real ingestion, repeat handling, and six system tests without installing dependencies. Research evaluation remains a separate command below.
+From the repository root, run `make run` (Python 3.11+ and GNU Make required). This exercises real ingestion, repeat handling, and seven system tests without installing dependencies. Research evaluation remains a separate command below.
 
 ## Quick start
 Python 3.11+ recommended. Pipeline and API use only the standard library. Evaluation dependencies are pinned in requirements.txt.
@@ -21,7 +21,7 @@ python evaluate.py
 python api.py
 ```
 
-Open http://127.0.0.1:8080/health or http://127.0.0.1:8080/daily?start=2012-01-01&end=2012-01-07 . The API runs locally; GitHub Pages hosts the static portfolio and result files, not a Python server.
+Open http://127.0.0.1:8080/health or http://127.0.0.1:8080/daily?start=2012-01-01&end=2012-01-07 . The API runs locally; GitHub Pages hosts the static portfolio and result files, not a Python server. Local API defaults to loopback; the container explicitly binds within its isolated network and publishes only to host loopback.
 
 ## Architecture
 Immutable attributed CSV → parse and domain validation → calendar/count/key reconciliation → atomic SQLite snapshot + batch audit → parameterized read-only API and static report. SHA-256 identifies each input. Repeating the active batch returns its cached audit without adding rows. A historical batch can be reactivated explicitly by passing its file.
@@ -36,7 +36,7 @@ Immutable attributed CSV → parse and domain validation → calendar/count/key 
 ## Executed results
 17,379 accepted observations, 731 observed days, 3,292,679 rentals, and 165 missing date-hour slots within those days. No original row violated the implemented contract. This does not establish that the underlying data are error-free. See results/pipeline.json for the complete audit.
 
-Six integration/unit tests cover real-data reconciliation, idempotency, fault types, invalid schema, empty input, and actual HTTP requests with success and error responses. Prediction and fault-injection measurements are in results/evaluation.json; see the research note for interpretation.
+Seven integration/unit tests cover real-data reconciliation, idempotency, fault types, invalid schema, empty input, and actual HTTP requests with success and error responses. Prediction and fault-injection measurements are in results/evaluation.json; see the research note for interpretation.
 
 ## Operational choices and limitations
 Snapshot replacement, observations, and audit metadata commit in one SQLite transaction. Empty/invalid-schema batches preserve the prior snapshot. The exported JSON is downstream of that transaction; file-write failure does not roll back SQLite. Whole-file reads use memory and are unsuitable for unbounded streams. The cache assumes no out-of-band database edits. No authentication or TLS is implemented, so the API binds only to localhost. SQLite serves one local process; distributed operations and cloud scaling are not claimed. HTTP HEAD is not implemented. Input identifiers are dataset record IDs, not personally identifying customer records.
@@ -50,14 +50,17 @@ Snapshot replacement, observations, and audit metadata commit in one SQLite tran
 ## Provenance and attribution
 See data/SOURCE.md. Dataset is CC BY 4.0. Standard Python libraries and scikit-learn implementations are used; their algorithms are not claimed as original contributions. Research context: Breck et al. (2019), Data Validation for Machine Learning, https://mlsys.org/Conferences/2019/doc/2019/167.pdf . Career requirements cross-check: https://www.amazon.jobs/en/jobs/10524253/data-engineer-ww-ops-finance-s-a (accessed 2026-10-18), used only to ground Python/SQL/ETL/data-quality relevance, not as an eligibility claim.
 
-## Container option
+## Containerized API
+
+From the repository root:
 
 ```sh
-docker build -t mobility-quality .
-docker run --rm mobility-quality
+docker compose up --build --wait
 ```
 
-Dockerfile supplied; Docker execution was not verified in the authoring environment. Python tests and execution were verified directly.
+Then open http://127.0.0.1:8080/health or http://127.0.0.1:8080/daily?start=2012-01-01&end=2012-01-07 . Stop with `docker compose down`. No account or API key is required; first use downloads the official Python base image.
+
+The image builds the real-data snapshot and runs system tests. Its API runs as UID 10001; Compose publishes only to host loopback, makes the filesystem read-only, drops capabilities, and supplies temporary scratch space. A pinned-version Gitleaks history scan and container build/HTTP checks run in CI. Inspect the workflow before treating container verification as complete.
 
 ```mermaid
 flowchart TD
@@ -69,7 +72,7 @@ flowchart TD
 
 ## Highlights
 - 17,379 real historical observations covering 731 dates.
-- Six system tests, including actual HTTP responses and snapshot preservation.
+- Seven system tests, including actual HTTP responses and snapshot preservation.
 - Three-seed assessment: forest MAE 45.687 rentals/hour on a chronological holdout; lower shuffled error is reported separately.
 - 54 controlled fault-policy evaluations; raw results and limitations included.
 

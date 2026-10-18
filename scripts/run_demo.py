@@ -40,7 +40,7 @@ def main():
                 "status": "passed",
                 "accepted_rows": result["accepted_rows"],
                 "rentals": result["rentals"],
-                "system_tests": 6,
+                "system_tests": 7,
                 "elapsed_seconds": round(time.perf_counter() - start, 3),
                 "python": sys.version.split()[0],
             },

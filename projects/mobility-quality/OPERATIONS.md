@@ -17,3 +17,6 @@ Unknown routes → 404. SQL dates use placeholders; user text is never interpola
 
 ## Release check
 Run tests, pipeline, evaluate, and compare output schema. Preserve environment versions and result files. Timing numbers depend on the local machine and are not service SLAs. A cloud adaptation needs authentication, managed storage, secret management, deployment testing, and budget approval.
+
+## Container operations
+From the repository root, run `docker compose up --build --wait`. Port 8080 is published only on 127.0.0.1. Use `docker compose logs` to inspect startup and request logs, and `docker compose down` to stop. If 8080 is occupied, stop that service or adjust the host side of the mapping. The image includes an immutable historical snapshot; it is not a live ingestion service. The API opens SQLite explicitly read-only and returns 503 without creating a database file when its snapshot is unavailable.

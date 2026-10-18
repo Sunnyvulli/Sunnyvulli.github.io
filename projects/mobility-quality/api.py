@@ -4,11 +4,14 @@ import argparse, json, sqlite3
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import urlparse, parse_qs
 from datetime import date
+from pathlib import Path
 
 
 def query(database, path):
     url = urlparse(path)
-    with sqlite3.connect(database) as db:
+    with sqlite3.connect(
+        Path(database).resolve().as_uri() + "?mode=ro", uri=True
+    ) as db:
         if url.path == "/health":
             return 200, {
                 "status": "ok",
@@ -57,8 +60,9 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("--database", default="mobility.sqlite")
     p.add_argument("--port", type=int, default=8080)
+    p.add_argument("--host", default="127.0.0.1")
     a = p.parse_args()
-    s = HTTPServer(("127.0.0.1", a.port), Handler)
+    s = HTTPServer((a.host, a.port), Handler)
     s.database = a.database
-    print("API on localhost", a.port, flush=True)
+    print("API listening on", a.host, a.port, flush=True)
     s.serve_forever()

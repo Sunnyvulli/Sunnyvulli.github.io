@@ -14,3 +14,9 @@ This is a documented content version; a GitHub release/tag has not been created.
 - Added pinned Black formatter dependency and format check; verification workflow now triggers on every push and PR.
 - Audited all public repositories and recorded conservative scores and concrete archive candidates.
 - Fresh-checkout smoke path passed in 1.693 seconds in the recorded Python 3.12.14 environment.
+
+### Security and container follow-up
+- Added read-only SQLite API access and a regression test for missing snapshots (503, no file creation).
+- Added non-root, loopback-published Compose API with health check and restricted runtime.
+- Added full-reachable-history Gitleaks scan and actual container build/HTTP/system tests in CI.
+- Updated current quick starts and operator/security documentation.

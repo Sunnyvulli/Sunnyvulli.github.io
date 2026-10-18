@@ -10,7 +10,7 @@
 | [Reproducible study](research/mobility-study.pdf) | Measured evaluation, leakage controls, fault injection, limitations; unpublished draft |
 | [Teaching lab](teaching/data-reliability-lab.md) | SQL/Python lesson with exercises, expected answers, and scoring rubric |
 
-The flagship project uses 17,379 real hourly observations with source/license attribution. Six system tests pass locally. CI runs the tests and a pinned-dependency evaluation. Docker configuration is supplied but not locally executed. GitHub Pages serves static content; the Python API runs locally.
+The flagship project uses 17,379 real hourly observations with source/license attribution. Seven system tests pass locally. CI runs the tests and a pinned-dependency evaluation. The containerized API has a dedicated CI build, non-root runtime, HTTP-contract, and read-only-filesystem check. GitHub Pages serves static content; the Python API runs locally.
 
 ## Repository layout
 
@@ -30,7 +30,7 @@ Prerequisites: Python 3.11+ and GNU Make. No account, API key, or dependency ins
 make run
 ```
 
-This loads the real dataset twice into an isolated temporary database, checks expected totals, and executes six system tests. The full research reproduction below installs scientific dependencies separately. A run under five minutes is only claimed for the recorded test environment, not every clean machine.
+This loads the real dataset twice into an isolated temporary database, checks expected totals, and executes seven system tests. The full research reproduction below installs scientific dependencies separately. A run under five minutes is only claimed for the recorded test environment, not every clean machine.
 
 ## Reproduce
 
@@ -52,3 +52,7 @@ This is historical system-wide data, not live station-level availability. No cli
 Software licensing: projects/mobility-quality/LICENSE. Dataset attribution: projects/mobility-quality/data/SOURCE.md. Resume credentials follow the supplied resume; external verification links are still needed.
 
 Engineering trade-offs: [docs/decisions.md](docs/decisions.md). Gold Standard audit: [docs/profile-audit.md](docs/profile-audit.md).
+
+## Container and history verification
+
+Run `docker compose up --build --wait` to start the local API, then visit http://127.0.0.1:8080/health . See [security/container workflow](.github/workflows/security-container.yml) and [security notes](docs/security.md).
