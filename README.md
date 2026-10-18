@@ -22,6 +22,16 @@ The flagship project uses 17,379 real hourly observations with source/license at
 - evidence/data-quality/: earlier synthetic-data learning exercise
 - .github/workflows/: deployment and verification
 
+## One-command smoke run
+
+Prerequisites: Python 3.11+ and GNU Make. No account, API key, or dependency installation is needed for this path. From a fresh clone:
+
+```sh
+make run
+```
+
+This loads the real dataset twice into an isolated temporary database, checks expected totals, and executes six system tests. The full research reproduction below installs scientific dependencies separately. A run under five minutes is only claimed for the recorded test environment, not every clean machine.
+
 ## Reproduce
 
 ```sh
@@ -40,3 +50,5 @@ SQLite keeps the complete local data path inspectable without account setup or p
 This is historical system-wide data, not live station-level availability. No client adoption, distributed cloud deployment, or published research is claimed. Next: whole-day rolling-origin evaluation, stronger time-series baselines, and a second dataset. Additional separate repositories should be created only when distinct projects are complete enough to inspect. No empty repositories are created to fill a pin quota.
 
 Software licensing: projects/mobility-quality/LICENSE. Dataset attribution: projects/mobility-quality/data/SOURCE.md. Resume credentials follow the supplied resume; external verification links are still needed.
+
+Engineering trade-offs: [docs/decisions.md](docs/decisions.md). Gold Standard audit: [docs/profile-audit.md](docs/profile-audit.md).

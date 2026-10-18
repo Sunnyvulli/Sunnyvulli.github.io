@@ -8,3 +8,9 @@
 - Added employer/faculty deep-link views and project evidence to the portfolio.
 
 This is a documented content version; a GitHub release/tag has not been created.
+
+## Unreleased
+- Added isolated `make run` smoke path, root ignore/environment example, and explicit decision log.
+- Added pinned Black formatter dependency and format check; verification workflow now triggers on every push and PR.
+- Audited all public repositories and recorded conservative scores and concrete archive candidates.
+- Fresh-checkout smoke path passed in 1.693 seconds in the recorded Python 3.12.14 environment.

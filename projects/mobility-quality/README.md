@@ -5,6 +5,10 @@ An auditable data pipeline, local analytics API, and evaluation study using real
 ## Problem and scope
 Reporting and prediction systems can produce plausible numbers even when inputs contain duplicates, inconsistent totals, or leakage. This project makes data contracts, rejected records, missing hours, and evaluation choices inspectable. It uses the complete downloaded UCI hourly dataset, not a toy sample. It is a local reference implementation, not a production service or station-level rebalancing system.
 
+## One-command verification
+
+From the repository root, run `make run` (Python 3.11+ and GNU Make required). This exercises real ingestion, repeat handling, and six system tests without installing dependencies. Research evaluation remains a separate command below.
+
 ## Quick start
 Python 3.11+ recommended. Pipeline and API use only the standard library. Evaluation dependencies are pinned in requirements.txt.
 
@@ -70,3 +74,5 @@ flowchart TD
 - 54 controlled fault-policy evaluations; raw results and limitations included.
 
 [![Portfolio verification](https://github.com/Sunnyvulli/Sunnyvulli.github.io/actions/workflows/career.yml/badge.svg)](https://github.com/Sunnyvulli/Sunnyvulli.github.io/actions/workflows/career.yml)
+
+Decision log: [../../docs/decisions.md](../../docs/decisions.md).
