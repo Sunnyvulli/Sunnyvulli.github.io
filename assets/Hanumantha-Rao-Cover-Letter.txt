@@ -1,0 +1,18 @@
+HANUMANTHA RAO VULLI
+Denton, TX | +1 940-594-4797 | vullihanumantharao@gmail.com
+Portfolio: https://sunnyvulli.github.io/ | GitHub: https://github.com/Sunnyvulli
+
+Dear Hiring Manager,
+
+I am seeking a data engineering role where I can contribute to reliable data pipelines, usable analytics, and well-maintained backend services. I hold a Master of Science in Data Engineering from the University of North Texas, and my professional background combines AWS data workflows, SQL, and Java development with Spring Boot.
+
+In my current role at PRC Cloud Tech, I contribute to ingestion pipelines and ETL workflows that prepare operational data for reporting and analytics. My responsibilities include writing and optimizing SQL, supporting data validation and monitoring, and helping troubleshoot scheduled processing failures. Earlier roles involved PostgreSQL and Oracle query tuning, Spring Boot services integrated with AWS, and Jenkins and Docker delivery workflows. These experiences have reinforced the importance of checking data quality and documenting systems so that other engineers can maintain them.
+
+My portfolio provides a concrete example of that approach. Mobility Quality Lab processes 17,379 historical bike-rental observations through a Python and SQLite pipeline with semantic checks, source hashes, transactional loading, and a read-only API. Its repository includes ten passing tests, CI-verified containers, and a reproducible temporal backtest. The documentation explains the results and their limitations, giving reviewers code and evidence they can inspect directly.
+
+I would welcome the opportunity to contribute my data and backend engineering experience to your team. I value clear technical communication, collaborative debugging, and practical improvements that make data more dependable for the people using it. My resume and portfolio provide additional details, and I would be glad to discuss how my background fits your team's needs.
+
+Thank you for your consideration.
+
+Sincerely,
+Hanumantha Rao Vulli
