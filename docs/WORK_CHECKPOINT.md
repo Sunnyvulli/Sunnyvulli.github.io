@@ -31,3 +31,7 @@ Use current GitHub files and workflow results to decide what remains; this list 
 Do not infer employment changes, PhD enrollment, credential validity, scientific novelty, publication acceptance, or deployment readiness. No paid API request or live payment was made. Do not delete/archive repositories or change account settings under the audit scope.
 
 Python dependency review: pypdf pin updated from 6.10.0 to 6.19.0 after advisory findings. Source/PDF checks passed with the updated parser. Subsequent portfolio and research requirements audits reported no known advisories; these are time-specific results.
+
+## Follow-up research resumed at the user's request
+
+The original delivery above remains complete. A separate research-validation phase is now recorded in [the research checkpoint](https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/docs/followup/CHECKPOINT.md). It adds raw-URL collection diagnostics, cross-corpus citation transfer, clustered uncertainty, and independent simulation testing. There are now 27 passing research integrity tests (20 original plus seven follow-up checks). Original and adaptive protocols, zero-target failures, sparse-event uncertainty, source attribution, and unexecuted specialised comparisons are retained in the follow-up report. Do not use the older baseline-delivery completion statement to infer that all scientific gaps or future research tasks are complete.

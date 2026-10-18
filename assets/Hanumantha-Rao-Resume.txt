@@ -37,7 +37,7 @@ https://github.com/Sunnyvulli/Sunnyvulli.github.io/tree/main/projects/mobility-q
 
 Applied ML Research Suite | Python, pandas, scikit-learn
 https://github.com/Sunnyvulli/Data-Engineer_AI
-- Three executed baselines: phishing feature robustness, citation-support triage, and early simulated-transient ranking; includes 20 integrity tests and offline batch scoring.
+- Three executed baselines: phishing feature robustness, citation-support triage, and early simulated-transient ranking; includes 27 integrity tests and offline batch scoring.
 - Uses public datasets, input checksums, group-disjoint evaluation, and documented limits; developed with Codex assistance.
 
 EDUCATION

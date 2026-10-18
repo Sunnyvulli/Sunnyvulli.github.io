@@ -67,6 +67,6 @@ Run `docker compose up --build --wait` to start the local API, then visit http:/
 
 ## Applied ML research suite
 
-The [research repository](https://github.com/Sunnyvulli/Data-Engineer_AI) includes executed phishing robustness, citation-support triage, and simulated-transient ranking baselines, with 20 integrity tests, source-data hashes, and measured results. These are separately identified as baselines rather than accepted publications or production systems.
+The [research repository](https://github.com/Sunnyvulli/Data-Engineer_AI) includes executed phishing robustness, citation-support triage, and simulated-transient ranking baselines, with 27 integrity tests, source-data hashes, and measured results. These are separately identified as baselines rather than accepted publications or production systems.
 
 The resume, cover letter, and academic CV include this evidence. Research cards are generated from `career-evidence.json`; `scripts/check_career.py` and `scripts/sync_evidence.py --check` guard document/text and page-content drift. See [the account audit](docs/GITHUB_AUDIT.md) for scope and unresolved boundaries.
