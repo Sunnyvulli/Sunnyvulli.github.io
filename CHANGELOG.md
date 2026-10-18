@@ -20,3 +20,9 @@ This is a documented content version; a GitHub release/tag has not been created.
 - Added non-root, loopback-published Compose API with health check and restricted runtime.
 - Added full-reachable-history Gitleaks scan and actual container build/HTTP/system tests in CI.
 - Updated current quick starts and operator/security documentation.
+
+### Temporal validation follow-up
+- Added three whole-day expanding-history folds, training-mean and weekly-lag baselines, and a calendar-only forest.
+- Added 84-day paired exploratory uncertainty, raw fold/run measurements, and a candid interpretation note.
+- Added three protocol regression tests; ten tests now run in the dependency-free smoke path and container.
+- CI reproduces the temporal study; README links a build narrative and limitations.

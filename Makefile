@@ -9,3 +9,7 @@ test:
 
 format-check:
 	$(PYTHON) -m black --check projects/mobility-quality/*.py scripts/*.py
+
+.PHONY: backtest
+backtest:
+	cd projects/mobility-quality && $(PYTHON) temporal.py
