@@ -4,41 +4,44 @@ Denton, TX | +1 940-594-4797 | vullihanumantharao@gmail.com
 Portfolio: https://sunnyvulli.github.io/ | GitHub: https://github.com/Sunnyvulli
 
 PROFESSIONAL SUMMARY
-Data engineer with experience supporting AWS data pipelines, ETL workflows, relational databases, and Java backend services. Background in SQL optimization, data validation, REST APIs, and CI/CD, supported by an MS in Data Engineering.
+Data engineer with experience supporting AWS pipelines, ETL workflows, relational databases, and Java backend services. MS in Data Engineering, with reproducible portfolio work in data quality and applied machine learning.
 
 TECHNICAL SKILLS
 Languages: Python, SQL, Java, JavaScript, TypeScript
-Data and Databases: ETL, data validation, SQL optimization, PostgreSQL, Oracle, MariaDB
+Data: ETL, data validation, SQL optimization, PostgreSQL, Oracle, MariaDB
 Cloud and DevOps: AWS EC2, S3, RDS, Lambda, API Gateway; Docker, Jenkins, Terraform
 Frameworks and Testing: Spring Boot, Angular, Hibernate/JPA, REST APIs, JUnit, Mockito, Selenium
 
 PROFESSIONAL EXPERIENCE
 Data Engineer | PRC Cloud Tech, USA | January 2026 - Present
-- Contribute to AWS ingestion pipelines and ETL workflows that prepare structured operational data for analytics and reporting.
-- Write and optimize SQL queries, validate reporting data, and support monitoring and troubleshooting of scheduled pipeline failures.
-- Support backend services using Lambda, API Gateway, and RDS; participate in code reviews and collaborative debugging.
+- Contribute to AWS ingestion and ETL workflows preparing operational data for reporting and analytics.
+- Write and optimize SQL, validate reporting data, and help troubleshoot scheduled pipeline failures and AWS backend services.
 
 Data Engineer | Tech Force, USA | September 2025 - January 2026
-- Supported AWS pipelines processing operational and transactional datasets; investigated data-quality issues affecting downstream systems.
-- Tuned PostgreSQL and Oracle queries through SQL analysis and indexing; assisted with Jenkins and Docker CI/CD workflows.
+- Supported AWS pipelines and investigated data-quality issues affecting downstream systems.
+- Tuned PostgreSQL and Oracle queries through SQL analysis and indexing; assisted with Jenkins and Docker delivery workflows.
 
 Data Engineer | Infosys Now, USA | April 2025 - September 2025
-- Worked on Spring Boot services integrated with AWS EC2, S3, and RDS for structured data ingestion and processing.
-- Performed validation checks for missing or inconsistent records and documented service configurations and data workflows.
+- Worked on Spring Boot services integrated with AWS EC2, S3, and RDS for structured data ingestion.
+- Checked missing and inconsistent records and documented service configurations and data workflows.
 
 Java Full Stack Developer | DBS Technologies, India | July 2022 - May 2023
-- Developed Angular application features and Spring Boot REST APIs supporting user requests and database operations.
+- Developed Angular features and Spring Boot REST APIs supporting application and database operations.
 - Assisted with AWS deployments and Jenkins/Docker automation; participated in sprint planning and code reviews.
 
-SELECTED PROJECT
+SELECTED PROJECTS
 Mobility Quality Lab | Python, SQLite, Docker, GitHub Actions
 https://github.com/Sunnyvulli/Sunnyvulli.github.io/tree/main/projects/mobility-quality
-- Portfolio pipeline processes 17,379 real historical observations with source hashes, semantic validation, transactional loading, and a read-only API.
-- Includes 10 passing tests and CI-verified containers. An 84-day backtest measured MAE of 49.77 versus 64.03 rentals/hour for a weekly-lag baseline.
+- Processes 17,379 historical observations with source hashes, semantic validation, transactional loading, and a read-only API; includes 10 passing tests.
+- An 84-day backtest measured MAE of 49.77 versus 64.03 rentals/hour for an online weekly-lag baseline.
+
+Applied ML Research Suite | Python, pandas, scikit-learn
+https://github.com/Sunnyvulli/Data-Engineer_AI
+- Three executed baselines: phishing feature robustness, citation-support triage, and early simulated-transient ranking; includes 20 integrity tests and offline batch scoring.
+- Uses public datasets, input checksums, group-disjoint evaluation, and documented limits; developed with Codex assistance.
 
 EDUCATION
 Master of Science in Data Engineering | University of North Texas, Denton, TX | December 2024
 
 CERTIFICATIONS
-AWS Certified Data Engineer - Associate
-Oracle Certified Professional: Java SE 17 Developer
+AWS Certified Data Engineer - Associate | Oracle Certified Professional: Java SE 17 Developer

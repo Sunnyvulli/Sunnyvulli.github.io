@@ -1,0 +1,86 @@
+[
+  {
+    "repository": "Sunnyvulli/Sunnyvulli",
+    "visibility": "public",
+    "default_branch_files": 1,
+    "empty": false
+  },
+  {
+    "repository": "[private repository]",
+    "visibility": "private",
+    "default_branch_files": 0,
+    "empty": true
+  },
+  {
+    "repository": "Sunnyvulli/DBSGITHUBTRAINING",
+    "visibility": "public",
+    "default_branch_files": 2,
+    "empty": false
+  },
+  {
+    "repository": "Sunnyvulli/Actvity_6_Datasets",
+    "visibility": "public",
+    "default_branch_files": 7,
+    "empty": false
+  },
+  {
+    "repository": "Sunnyvulli/docforge-ai",
+    "visibility": "public",
+    "default_branch_files": 7,
+    "empty": false
+  },
+  {
+    "repository": "Sunnyvulli/quizforge-ai",
+    "visibility": "public",
+    "default_branch_files": 0,
+    "empty": true
+  },
+  {
+    "repository": "Sunnyvulli/brandkit-ai",
+    "visibility": "public",
+    "default_branch_files": 0,
+    "empty": true
+  },
+  {
+    "repository": "Sunnyvulli/reviewresponder-ai",
+    "visibility": "public",
+    "default_branch_files": 0,
+    "empty": true
+  },
+  {
+    "repository": "Sunnyvulli/scriptforge-ai",
+    "visibility": "public",
+    "default_branch_files": 0,
+    "empty": true
+  },
+  {
+    "repository": "Sunnyvulli/policyforge-ai",
+    "visibility": "public",
+    "default_branch_files": 0,
+    "empty": true
+  },
+  {
+    "repository": "Sunnyvulli/jobdesc-ai",
+    "visibility": "public",
+    "default_branch_files": 0,
+    "empty": true
+  },
+  {
+    "repository": "Sunnyvulli/auto-job-applier",
+    "visibility": "public",
+    "default_branch_files": 0,
+    "empty": true
+  },
+  {
+    "repository": "Sunnyvulli/Data-Engineer_AI",
+    "visibility": "public",
+    "default_branch_files": 1,
+    "empty": false
+  },
+  {
+    "repository": "Sunnyvulli/Sunnyvulli.github.io",
+    "visibility": "public",
+    "default_branch_files": 59,
+    "empty": false
+  }
+]

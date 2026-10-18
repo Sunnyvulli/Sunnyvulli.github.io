@@ -20,7 +20,7 @@ SECTIONS = {
     "PROFESSIONAL SUMMARY",
     "TECHNICAL SKILLS",
     "PROFESSIONAL EXPERIENCE",
-    "SELECTED PROJECT",
+    "SELECTED PROJECTS",
     "EDUCATION",
     "CERTIFICATIONS",
 }
@@ -91,7 +91,7 @@ def main():
         elif line.startswith("https://"):
             style = "url"
         elif section == "PROFESSIONAL EXPERIENCE" or (
-            section == "SELECTED PROJECT" and "|" in line
+            section == "SELECTED PROJECTS" and "|" in line
         ):
             style = "job"
         else:

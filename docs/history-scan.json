@@ -1,0 +1,41 @@
+{
+  "scope": "five high-confidence credential patterns across all fetched reachable Git blobs; not exhaustive secret detection",
+  "repositories": [
+    {
+      "repo": "Actvity_6_Datasets",
+      "refs": 1,
+      "reachable_blobs_scanned": 9,
+      "matches": []
+    },
+    {
+      "repo": "DBSGITHUBTRAINING",
+      "refs": 2,
+      "reachable_blobs_scanned": 2,
+      "matches": []
+    },
+    {
+      "repo": "Data-Engineer_AI",
+      "refs": 1,
+      "reachable_blobs_scanned": 39,
+      "matches": []
+    },
+    {
+      "repo": "Sunnyvulli",
+      "refs": 1,
+      "reachable_blobs_scanned": 4,
+      "matches": []
+    },
+    {
+      "repo": "Sunnyvulli.github.io",
+      "refs": 9,
+      "reachable_blobs_scanned": 95,
+      "matches": []
+    },
+    {
+      "repo": "docforge-ai",
+      "refs": 1,
+      "reachable_blobs_scanned": 7,
+      "matches": []
+    }
+  ]
+}

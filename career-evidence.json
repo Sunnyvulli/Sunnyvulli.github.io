@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "research_repository": "https://github.com/Sunnyvulli/Data-Engineer_AI",
+  "research_commit": "d609ef149611137173ccb9e2bda04d906c3e5910",
+  "research_test_count": 20,
+  "mobility_test_count": 10,
+  "projects": [
+    {
+      "id": "phishing",
+      "title": "Phishing feature robustness",
+      "description": "Historical UCI benchmark with 11,055 records. Grouped evaluation measures how feature outages affect detection.",
+      "detail": "Engineered features; no screenshot or live-campaign validation.",
+      "url": "https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/docs/PHISHING.md"
+    },
+    {
+      "id": "checkpoints",
+      "title": "Citation-support checkpoints",
+      "description": "Review-queue baselines evaluated on 2,604 human-labelled ALCE sentences from 200 questions.",
+      "detail": "Support triage, not factual verification or a student-learning trial.",
+      "url": "https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/docs/CHECKPOINTS.md"
+    },
+    {
+      "id": "transients",
+      "title": "Early transient prioritisation",
+      "description": "Kilonova candidate ranking from 1,421,705 simulated PLAsTiCC observations, using only data available at each alert cutoff.",
+      "detail": "Simulation benchmark; no telescope operation or live discovery claimed.",
+      "url": "https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/docs/TRANSIENTS.md"
+    }
+  ]
+}
