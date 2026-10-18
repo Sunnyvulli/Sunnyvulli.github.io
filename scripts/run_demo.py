@@ -5,6 +5,7 @@ import subprocess
 import sys
 import tempfile
 import time
+import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -13,6 +14,7 @@ PROJECT = ROOT / "projects" / "mobility-quality"
 
 def main():
     start = time.perf_counter()
+    test_count = unittest.defaultTestLoader.discover(str(PROJECT)).countTestCases()
     with tempfile.TemporaryDirectory(prefix="mobility-demo-") as tmp:
         database = Path(tmp) / "demo.sqlite"
         report = Path(tmp) / "report.json"
@@ -40,7 +42,7 @@ def main():
                 "status": "passed",
                 "accepted_rows": result["accepted_rows"],
                 "rentals": result["rentals"],
-                "system_tests": 7,
+                "tests": test_count,
                 "elapsed_seconds": round(time.perf_counter() - start, 3),
                 "python": sys.version.split()[0],
             },

@@ -1,6 +1,6 @@
 FROM python:3.12-slim
 WORKDIR /app
-COPY pipeline.py api.py test_system.py ./
+COPY pipeline.py api.py temporal.py test_system.py test_temporal.py ./
 COPY data/hour.csv data/hour.csv
 RUN python pipeline.py && python -m unittest -v
 USER 10001:10001

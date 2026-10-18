@@ -7,7 +7,7 @@ Reporting and prediction systems can produce plausible numbers even when inputs 
 
 ## One-command verification
 
-From the repository root, run `make run` (Python 3.11+ and GNU Make required). This exercises real ingestion, repeat handling, and seven system tests without installing dependencies. Research evaluation remains a separate command below.
+From the repository root, run `make run` (Python 3.11+ and GNU Make required). This exercises real ingestion, repeat handling, and ten tests (seven system and three temporal-protocol tests) without installing dependencies. Research evaluation remains a separate command below.
 
 ## Quick start
 Python 3.11+ recommended. Pipeline and API use only the standard library. Evaluation dependencies are pinned in requirements.txt.
@@ -72,10 +72,14 @@ flowchart TD
 
 ## Highlights
 - 17,379 real historical observations covering 731 dates.
-- Seven system tests, including actual HTTP responses and snapshot preservation.
+- Ten tests (seven system and three temporal-protocol tests), including actual HTTP responses and snapshot preservation.
 - Three-seed assessment: forest MAE 45.687 rentals/hour on a chronological holdout; lower shuffled error is reported separately.
 - 54 controlled fault-policy evaluations; raw results and limitations included.
 
 [![Portfolio verification](https://github.com/Sunnyvulli/Sunnyvulli.github.io/actions/workflows/career.yml/badge.svg)](https://github.com/Sunnyvulli/Sunnyvulli.github.io/actions/workflows/career.yml)
 
 Decision log: [../../docs/decisions.md](../../docs/decisions.md).
+
+## Whole-day temporal backtest
+
+Run `make backtest` from the repository root after installing requirements.txt. Three expanding-history, whole-day windows cover 84 days. Calendar-only forest weighted MAE: 49.766 rentals/hour; online weekly-lag baseline: 64.031. The baseline assumes seven-day-old observed counts are available as each test hour arrives; this is not a fixed 28-day-ahead forecast. See [protocol](../../research/temporal-followup.md), [build note](../../docs/build-notes-temporal.md), and results/temporal-evaluation.json for limits, versions, boundaries, and exploratory uncertainty.

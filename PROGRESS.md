@@ -23,3 +23,9 @@ Whole-day rolling-origin evaluation with a lag-aware seasonal baseline, then bro
 - Verified official Gitleaks archive checksum and scanned 15 reachable commits locally with no findings.
 - Added default-rule, redacted full-history scanning and actual non-root Compose build/API/system tests in CI.
 - Current conservative rubric score: 8/10; metadata and semantic version release remain incomplete.
+
+## Temporal evaluation iteration
+- Executed three disjoint 28-day historical test windows with strictly prior training.
+- Calendar forest weighted MAE 49.766; online weekly lag 64.031; no future-weather inputs.
+- Recorded nine seeded model fits, six baseline evaluations, fold boundaries/fallback counts, and 84 paired daily errors.
+- Added three temporal tests and documented online information availability and exploratory bootstrap limitations.

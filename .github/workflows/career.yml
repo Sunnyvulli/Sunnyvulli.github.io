@@ -25,7 +25,9 @@ jobs:
           python -m unittest -v
       - name: Reproduce evaluation
         working-directory: projects/mobility-quality
-        run: python evaluate.py
+        run: |
+          python evaluate.py
+          python temporal.py
       - uses: actions/upload-artifact@v4
         with:
           name: verified-evaluation
