@@ -14,12 +14,15 @@ Updated: October 18, 2026. This file records engineering deliverables and verifi
 - Resume, general cover letter, and academic CV updated with actual research evidence; all are one-page selectable-text PDFs. Source/PDF text checks and rendered-page inspection passed.
 - Portfolio research cards generated from reviewed `career-evidence.json`; local links checked.
 
-## Remaining delivery verification
+## Delivery verification complete
 
-- Application fixes, profile README, and coursework documentation are published; DocForge remote workflow 39176547736 passed.
-- Publish the prepared career/portfolio/audit changes, preserving the latest GitHub head.
-- Verify new remote workflow results and the deployed portfolio/document links.
-- Record final commit IDs and the remaining access/research boundaries in GITHUB_AUDIT.md.
+- Research implementation commit: `d609ef149611137173ccb9e2bda04d906c3e5910`; integrity workflow 39141007220 passed.
+- DocForge fix commit: `d52edc12dc2637ce4ab613120efb4a7d645aa7af`; verification workflow 39176547736 passed.
+- Career/portfolio/audit commit: `2c03da0c0e50c9dc9ad74c11e99eff9977e514c3`; portfolio verification 39176716497, deployment 39176716469, security/container 39176716435, and Pages 39176715480 all passed.
+- The live portfolio contained all three research cards; all three career PDFs returned HTTP 200 and matched updated bytes. Desktop visual inspection passed. Dedicated mobile rendering remains unverified.
+- Profile and coursework documentation changes are published; final commit IDs are in GITHUB_AUDIT.md.
+
+The authorized baseline engineering and scoped audit delivery is complete. The limit-retry task can be paused. This does not mean that the full university research programmes, novel publications, account settings blocked by permissions, or production deployment requirements are complete. Those boundaries remain explicit in the audit and research plan.
 
 ## Continuing rules
 

@@ -75,3 +75,9 @@ The first Python requirements audit identified multiple advisories affecting pyp
 ## Continuing work
 
 See `WORK_CHECKPOINT.md` for publication and remote-check status. Scientific publication gates remain in the research suite's `docs/RESEARCH_PLAN.md`. No external supervisor messages, job applications, invitations, or paper submissions were sent.
+
+## Deployment inspection
+
+Portfolio update commit: `2c03da0c0e50c9dc9ad74c11e99eff9977e514c3`. The live page was opened in a browser and all three new research cards were present. At a 1363-pixel viewport there was no horizontal overflow and the research layout was visually inspected. A dedicated mobile viewport render was not executed; responsive CSS alone is not treated as a completed mobile-browser test. All three live career PDFs returned HTTP 200 and matched the updated local bytes.
+
+Remote workflow results for the portfolio implementation commit: portfolio verification 39176716497, Pages deployment 39176716469, security/container verification 39176716435, and Pages build 39176715480 all completed successfully. DocForge verification 39176547736 also passed. The final checkpoint records this verified engineering-delivery state separately from future research and external-access requirements.
