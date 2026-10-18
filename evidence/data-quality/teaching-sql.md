@@ -1,6 +1,6 @@
 # Teaching sample: validate before you aggregate
 
-AI-assisted instructional sample using synthetic data; not evidence of prior teaching employment.
+Instructional sample using synthetic data; not evidence of prior teaching employment.
 
 **Goal:** Explain how duplicate records distort SQL summaries and how an explicit quality gate changes the result.
 

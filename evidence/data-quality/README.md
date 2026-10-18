@@ -1,6 +1,6 @@
 # Data Quality Gate: CSV → validated SQLite → audit report
 
-AI-assisted portfolio demonstration created for Hanumantha Rao Vulli. All records are synthetic. This is a runnable learning and engineering sample, not a claim of employer work, production deployment, or independent authorship.
+Foundational portfolio exercise using synthetic orders. This is a runnable learning sample, not employer work or a production deployment. See projects/mobility-quality for the real-data flagship project.
 
 ## Problem
 A reporting pipeline should not silently accept duplicate orders, invalid dates, missing identifiers, or malformed currency. This example separates valid records from rejected ones, records why each rejection occurred, and reconciles accepted data with SQL aggregates.

@@ -1,4 +1,4 @@
-"""AI-assisted portfolio demonstration; synthetic orders, no external dependencies."""
+"""Portfolio demonstration; synthetic orders, no external dependencies."""
 import argparse
 import csv
 import json
