@@ -60,3 +60,7 @@ Run `docker compose up --build --wait` to start the local API, then visit http:/
 ## Temporal evaluation follow-up
 
 [Whole-day backtest](research/temporal-followup.md): 84 historical test days, calendar-only forest MAE 49.766 versus online weekly-lag MAE 64.031. Protocol, seeds, raw results, exploratory uncertainty, and limitations are included. [Build note](docs/build-notes-temporal.md). After installing evaluation dependencies, run `make backtest`.
+
+## Application documents
+
+[ATS-friendly resume PDF](assets/Hanumantha-Rao-Resume.pdf) · [Resume text](assets/Hanumantha-Rao-Resume.txt) · [General cover letter PDF](assets/Hanumantha-Rao-Cover-Letter.pdf) · [Cover letter text](assets/Hanumantha-Rao-Cover-Letter.txt). Single-column selectable text; parsing checks and tailoring limits are documented in [application documents](docs/application-documents.md). No universal ATS score is claimed.

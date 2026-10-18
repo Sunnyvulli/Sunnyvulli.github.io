@@ -26,3 +26,8 @@ This is a documented content version; a GitHub release/tag has not been created.
 - Added 84-day paired exploratory uncertainty, raw fold/run measurements, and a candid interpretation note.
 - Added three protocol regression tests; ten tests now run in the dependency-free smoke path and container.
 - CI reproduces the temporal study; README links a build narrative and limitations.
+
+### Application document refresh
+- Rebuilt the resume as an embedded-font, single-column, selectable-text PDF using the supplied resume and verified portfolio results.
+- Added a matching general data-engineering cover letter, editable text sources, build scripts, and download links.
+- Both documents are one page; pypdf and Poppler recover the full text in source order.
