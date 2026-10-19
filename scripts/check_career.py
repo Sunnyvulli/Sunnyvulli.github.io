@@ -60,7 +60,7 @@ def main():
         elif parsed.fragment and parsed.fragment not in parser.ids:
             raise ValueError(f"Missing section: {link}")
     results = []
-    for name in ("Resume", "Cover-Letter", "Academic-CV"):
+    for name in ("Resume", "Cover-Letter", "Cover-Letter-Agentic", "Academic-CV"):
         stem = f"Hanumantha-Rao-{name}"
         source = (ROOT / "assets" / f"{stem}.txt").read_text()
         reader = PdfReader(ROOT / "assets" / f"{stem}.pdf")
@@ -104,7 +104,7 @@ def main():
     for project in evidence["engineering_projects"]:
         if project["url"] not in page:
             raise ValueError(f"Missing portfolio engineering link: {project['id']}")
-        for name in ("Resume", "Cover-Letter", "Academic-CV"):
+        for name in ("Resume", "Cover-Letter", "Cover-Letter-Agentic", "Academic-CV"):
             source = (ROOT / "assets" / f"Hanumantha-Rao-{name}.txt").read_text()
             for phrase in project["document_checks"]:
                 if phrase not in source:
