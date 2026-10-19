@@ -71,3 +71,7 @@ Whole-day rolling-origin evaluation with a lag-aware seasonal baseline, then bro
 - Issue #17: improved one-page resume hierarchy, restrained color, section rules and embedded fonts without changing career facts.
 - Rendered and visually inspected the final PDF; corrected a system-font rendering issue by embedding DejaVu. Verified selectable source-text parity, clickable URLs, zero images, page count and all three document checks with `python scripts/check_career.py`; evidence synchronization passed.
 - Consistency review: portfolio, resume, cover letter and academic CV retain matching verified project claims. No new qualifications or results; no other document rewrite needed. ATS compatibility is a formatting goal, not a universal guarantee.
+
+### LinkedIn contact synchronization — 2026-10-19
+- Issue #19: added the owner-supplied LinkedIn profile to the portfolio footer and all three application document contact blocks. Source URL: https://www.linkedin.com/in/hanumantharaovulli/ .
+- Rebuilt and visually inspected all four PDF pages; adjusted section/paragraph spacing to retain one-page resume, one-page cover letter and two-page CV. Verified exact source-text parity, clickable URL annotations, 42 portfolio links, unchanged career claims, formatter and evidence synchronization.
