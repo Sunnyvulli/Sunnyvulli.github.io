@@ -56,3 +56,8 @@ This is a documented content version; a GitHub release/tag has not been created.
 - Added Spark, Iceberg, dbt, Airflow, LangGraph, MCP and validated Terraform to the supported project skill set with explicit deployment/security limits.
 - Corrected the career manifest's Mobility test count and added document/project consistency checks.
 - Kept a one-page resume/cover letter; used a two-page academic CV for readable research and experience sections.
+
+### Standalone sources and retrieval evidence, 2026-10-19
+- Linked independently verified standalone Mobility and the executed retrieval service across portfolio and career documents.
+- Added authored retrieval-baseline metrics, explicit guard misses, release source commits and a current audit that supersedes historical inventory notes.
+- Kept the resume/letter one page and CV two pages; owner qualifications and unpublished status are unchanged.

@@ -1,12 +1,35 @@
 # GitHub Gold Standard audit
 
+## Current engineering audit, 2026-10-19
+
+Every public project should answer: what is it, does it work, and what evidence supports trust? The following supersedes the older inventory and connector/access notes below; old observations are retained as history, not current scores.
+
+| Repository | Executed evidence | Current limits / remaining gate |
+|---|---|---|
+| [mobility-quality](https://github.com/Sunnyvulli/mobility-quality) | 13 tests, real HTTP and transactional recovery, independent backtest/evaluation, actual Docker/non-root checks, full-history scan, descriptive metadata/topics, MIT license, v0.1.0 release | Local historical reference; no independent-source or cloud validation. Dependency-free smoke ran in 4.68 seconds with Python 3.12.14 and Make. |
+| [lakehouse-guardian](https://github.com/Sunnyvulli/lakehouse-guardian) | 11 behavioral tests; actual Spark/Iceberg/dbt run, real Airflow CI, validated Terraform, 21 controlled batches (precision 1.00 / recall 0.80), full-history scan, metadata/topics/license and v0.1.0 | Initial environment installation not certified under five minutes; no AWS apply, durable multi-user approval, learned planner or independent fault labels. |
+| [catalog-sentinel](https://github.com/Sunnyvulli/catalog-sentinel) | 14 tests; actual 16-request stdio evaluation, 13/13 expected denials, unchanged DB bytes; full-history scan, metadata/topics/license and v0.1.0 | Local host assigns permissions; no remote identity or independent model-level injection test. Initial clean-machine setup time not certified. |
+| [evidence-ledger-rag](https://github.com/Sunnyvulli/evidence-ledger-rag) | 18 tests; actual loopback HTTP; 10 docs/34 chunks/14 authored queries; hybrid expected-file hit@3 11/14 vs BM25 10/14; full-history scan, recorded demo, metadata/topics/license and v0.1.0 | Extractive, lexical development reference. Only 3/5 unsupported probes flagged; no independent relevance/faithfulness benchmark or generative component. Initial clean-machine setup time not certified. |
+| [Data-Engineer_AI](https://github.com/Sunnyvulli/Data-Engineer_AI) | Current snapshot: 58 integrity tests, 19 saved-output checks and multi-study score audit pass. CI now runs every push/PR; exact reviewed tokenizer-checksum findings are scoped by historical fingerprint. | Integrity audit is not new raw-data training, new external validation, peer review, publication acceptance or mastery evidence. Keep negative research results visible. |
+
+Against the user's ten-point checklist, Mobility meets the ten evidence categories in the recorded environment. The other three engineering repositories are conservatively **9/10**, withholding the clean-machine under-five-minute setup gate; their documented one-command runs after environment installation are verified. These are scoped checklist scores, not independent security audits, percentile rankings or hiring/admission predictions. Scanner success cannot prove the absence of every secret.
+
+All four engineering projects now have actual v0.1.0 tags/releases after green PR and main checks. Source, raw outputs, decisions, limitations, maintenance notes and roadmap are inspectable. The standalone Mobility import identifies source bytes/history instead of rewriting the deliberate reset; old portfolio URLs remain compatible. The three new systems add different capabilities, not three claimed independent datasets or production deployments.
+
+The six-line profile README is being synchronized through its own PR. Profile photo/bio/location/pins/audience and repository archive/delete settings are not changed. Older weak repositories remain owner-review candidates; do not archive/delete without specific authorization.
+
+### Next substantive milestone
+Independent-source/relevance labels and durable permission/approval identity, followed by an explicitly budgeted AWS integration with teardown evidence. Admissions education details, verified certification URLs, substantiated employer outcomes and consented referees remain owner-dependent; see [career review](career-review.md). Do not manufacture publications or metrics to close those gaps.
+
+## Historical audit notes (superseded above)
+
 Reliability update, 2026-10-19: 13 flagship tests plus four earlier data-quality tests pass locally. Cached replay now verifies every observation field, repairs drift, and binds parsing to hashed bytes. See [build and regression evidence](build-notes-reliability.md). The historical scores/inventory below are not reclassified by this reliability change; metadata and actual tag/release remain unverified.
 
 Update, 2026-10-19: the inventory below is historical. Data-Engineer_AI now contains the applied ML research suite and should not be archived on the basis of its earlier introductory README. See [current evidence and remaining gaps](profile-evidence-next-steps.md). A fresh local smoke run and all 14 system/data-quality tests passed; the new workload harness also verified five historical batch loads, deterministic replay, and invalid-schema recovery. This does not verify cloud operation, employment, certifications, or personal code ownership.
 
 Audit date: 2026-10-18. Scope: public repository inventory, available source/documentation, fresh portfolio clone, executed smoke run, known-format history scan, and GitHub Actions. Scores award only demonstrated criteria. Unverified items receive zero; zero does not necessarily mean defective. The special profile README repository is not a software project and is exempt from the runnable-project rubric.
 
-## Flagship score: 8/10 verified
+## Historical flagship score, 2026-10-18: 8/10 verified
 
 | # | Criterion | Score | Evidence / remaining gap |
 |---|---|---:|---|
@@ -23,7 +46,7 @@ Audit date: 2026-10-18. Scope: public repository inventory, available source/doc
 
 A dedicated CI job now builds and starts the Compose API, verifies HTTP behavior/non-root UID, and runs system tests inside the image. Check the linked workflow result before treating Docker execution as verified. The under-five-minute claim applies to the dependency-free smoke path in the recorded environment. The full scientific evaluation installs dependencies and takes longer. A score is a rubric result, not a percentile ranking or career guarantee.
 
-## Public repository triage
+## Historical public repository triage, 2026-10-18
 
 | Repository | Verified state | Conservative score / action |
 |---|---|---|
@@ -43,7 +66,7 @@ A dedicated CI job now builds and starts the Compose API, verifies HTTP behavior
 
 These are conservative evidence scores, not exhaustive code/security reviews. No repository has been archived or deleted by this audit. Private repositories were excluded. Pin state, photo, public name/bio/location, and manual metadata settings were not changed. The current connector supports content/PR operations but does not expose repository archival, topics, description edits, pinning, or release creation.
 
-## Ordered next work
+## Historical ordered work, superseded by the current audit
 
 1. Merge the clean-run/formatter/decision-log change only after PR CI passes.
 2. Keep the dedicated Gitleaks history scan passing; review findings without posting secret values.

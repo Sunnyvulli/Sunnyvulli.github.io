@@ -56,3 +56,13 @@ Whole-day rolling-origin evaluation with a lag-aware seasonal baseline, then bro
 - Fixed the overlooked mobility_test_count manifest field (10 -> 13) and extended the career check to enforce manifest/discovered count agreement plus new project phrases.
 - Rebuilt the one-page resume and cover letter; academic CV now uses two deliberate pages. Source/PDF text, rendered layout, links and CI are reviewed before publication.
 - Hybrid retrieval remains local work awaiting its separate public-repository/CI milestone; no resume claim added. Owner facts requested in docs/career-review.md remain missing.
+
+
+## 2026-10-19: Standalone project and release completion
+- Imported Mobility Quality Lab into Sunnyvulli/mobility-quality with exact source/data blob provenance and independent CI; 13 tests, real Docker/API/non-root checks, temporal/evaluation execution and full-history scan passed before merge. Old portfolio paths/history remain intact.
+- Published Evidence Ledger RAG: 10 owner-authored documents/34 chunks, incremental transactional indexing, lexical BM25/character/RRF retrieval, exact-span extracts and an actual loopback HTTP service. Hybrid/character expected-file hit@3 is 11/14 versus BM25 10/14 on authored development queries. The lexical guard flags 3/5 unsupported probes and misses two semantic changes.
+- Deployed browser QA found an exact-but-unresponsive audit-sink answer; two regressions failed before and pass after sentence-specificity scoring. Initial/revised outputs remain public; all 18 tests pass. No independent faithfulness or learned-generation claim is added.
+- Four engineering v0.1.0 releases are published after green PR/main CI, with descriptions/topics/licenses, changelogs, decisions, limitations and raw evidence. Recorded Guardian/RAG demos are static, not live backends.
+- Re-executed the current research snapshot's 58 integrity tests and saved-output audits. Removed CI path filters and added full-history scanning. Six tokenizer artifact SHA-256 false positives were reviewed and allowlisted only by exact historical fingerprints; a temporary synthetic-key probe remains detected. No history rewrite, model rerun or paper acceptance claim.
+- Synchronized the one-page resume/letter and two-page CV, canonical links, reviewed manifest and current Gold Standard audit. Rendered all four pages and verified source/PDF text and clickable links. Deployed bytes and final CI are verified after merge.
+- Remaining milestones: independent labels/semantic evaluation, durable approval/remote identity and a separately authorized AWS run; owner facts/evidence remain documented in docs/career-review.md.
