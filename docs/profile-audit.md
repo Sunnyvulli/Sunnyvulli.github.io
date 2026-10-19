@@ -19,7 +19,7 @@ All four engineering projects now have actual v0.1.0 tags/releases after green P
 The six-line profile README is being synchronized through its own PR. Profile photo/bio/location/pins/audience and repository archive/delete settings are not changed. Older weak repositories remain owner-review candidates; do not archive/delete without specific authorization.
 
 ### Next substantive milestone
-Independent-source/relevance labels and durable permission/approval identity, followed by an explicitly budgeted AWS integration with teardown evidence. Admissions education details, verified certification URLs, substantiated employer outcomes and consented referees remain owner-dependent; see [career review](career-review.md). Do not manufacture publications or metrics to close those gaps.
+Independent-source/relevance labels and durable permission/approval identity, followed by an explicitly budgeted AWS integration with teardown evidence. Admissions grades/scale and MS research-component details, verified certification URLs, substantiated employer outcomes and consented referees remain owner-dependent; see [career review](career-review.md). Do not manufacture publications or metrics to close those gaps.
 
 ## Historical audit notes (superseded above)
 

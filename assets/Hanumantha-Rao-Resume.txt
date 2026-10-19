@@ -5,7 +5,7 @@ Portfolio: https://sunnyvulli.github.io/ | GitHub: https://github.com/Sunnyvulli
 LinkedIn: https://www.linkedin.com/in/hanumantharaovulli/
 
 PROFESSIONAL SUMMARY
-Data engineer with AWS pipeline, SQL, and Java backend experience; MS in Data Engineering. Verified portfolio work spans Spark/Iceberg, dbt, Airflow, approval-gated LangGraph workflows, MCP tools and reproducible retrieval evaluations.
+Data engineer with AWS pipeline, SQL, and Java backend experience; MS in Data Engineering. Portfolio: Spark/Iceberg, dbt, Airflow, approval-gated LangGraph, MCP and reproducible retrieval evaluations.
 
 TECHNICAL SKILLS
 Languages and Backend: Python, SQL, Java; PostgreSQL, Oracle, SQLite; Spring Boot, REST APIs
@@ -44,6 +44,8 @@ https://github.com/Sunnyvulli/Data-Engineer_AI
 
 EDUCATION
 Master of Science in Data Engineering | University of North Texas | December 2024
+Bachelor of Technology in Computer Science and Engineering | 2019 - 2022
+KKR and KSR Institute of Technology and Sciences, Guntur
 
 CERTIFICATIONS
 AWS Certified Data Engineer - Associate | Oracle Certified Professional: Java SE 17 Developer

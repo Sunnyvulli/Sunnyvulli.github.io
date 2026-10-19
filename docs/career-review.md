@@ -12,7 +12,7 @@
 
 ## Evidence still required
 
-- Bachelor's exact degree, institution, dates, CGPA/percentage, and grading scale. No invented university, grade, or completion date is inserted.
+- Bachelor's CGPA/percentage and grading scale. The owner supplied the B.Tech CSE institution and 2019–2022 dates on 2026-10-19; these are now recorded along with diploma and SSC history. No grade, awarding university or month is inferred.
 - MS classification as thesis, capstone, research project, or coursework; provide project title, supervisor, credits/duration, assessment and available report. The current degree listing alone cannot establish any program's research-component eligibility.
 - Any genuinely published/accepted work: bibliographic citation, author list, DOI or acceptance evidence. No verified publication is presently available in this repository's evidence; retain the unpublished labels. This is not a claim that every PhD program requires prior publications.
 - Employment outcomes: dated, comparable job logs/query plans and exact personal contribution. Keep portfolio measurements separate from employer performance; no invented percentages or traffic volumes.
@@ -43,3 +43,6 @@ The updated resume remains one page. The academic CV uses a deliberate second pa
 
 ## Standalone and retrieval follow-through, 2026-10-19
 Mobility Quality Lab now has its own independently tested/containers-verified repository; current document links point there and historical portfolio paths remain available. Evidence Ledger RAG is now public and CI-verified with 18 tests, 14 authored queries and retained semantic guard misses. The resume/CV/cover letter include this bounded reference implementation; they do not inherit the research suite's external-validation performance for its guard. All four engineering projects have v0.1.0 releases. The same owner-qualification/publication/employer evidence gaps remain; none is filled by assumption.
+
+## Education history follow-through, 2026-10-19
+Owner-supplied B.Tech and diploma history now appear in the portfolio; the one-page resume adds the B.Tech and the two-page CV includes B.Tech, diploma and SSC. The CV page break now precedes unpublished writing, retaining education first and complete project entries on page one. Resume wording was shortened without changing claims to fit the added degree. The cover letter remains consistent with the confirmed MS and needs no revision. Grades/scale and the MS research component remain unconfirmed.

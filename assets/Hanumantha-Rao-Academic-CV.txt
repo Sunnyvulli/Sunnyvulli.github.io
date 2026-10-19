@@ -6,6 +6,12 @@ LinkedIn: https://www.linkedin.com/in/hanumantharaovulli/
 
 EDUCATION
 Master of Science in Data Engineering | University of North Texas | December 2024
+Bachelor of Technology in Computer Science and Engineering | 2019 - 2022
+KKR and KSR Institute of Technology and Sciences, Guntur
+Diploma in Mechanical Engineering | 2016 - 2019
+Kallam Haranadhareddy Institute of Technology, Guntur
+Secondary School Certificate (SSC) | 2015 - 2016
+Oxford Concept High School, Guntur
 
 RESEARCH INTERESTS
 Security and governance of agentic AI; evidence-supported decisions, data lineage, and reproducible evaluation. Current work examines citation support, bounded tool permissions, and approval-gated data workflows. Learned-agent security evaluation remains a future direction.

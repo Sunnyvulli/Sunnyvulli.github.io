@@ -79,7 +79,7 @@ styles = {
         fontSize=9.5,
         leading=11.2,
         textColor=INK,
-        spaceBefore=3,
+        spaceBefore=2,
         spaceAfter=1,
         keepWithNext=True,
     ),

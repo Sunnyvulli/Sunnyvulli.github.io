@@ -65,3 +65,4 @@ This is a documented content version; a GitHub release/tag has not been created.
 ### Resume presentation
 - Refined one-page resume typography, role/project hierarchy and section separators with embedded fonts and selectable text; preserved career facts and clickable repository links.
 - Added owner-provided LinkedIn contact link to portfolio and application documents; preserved verified facts and document page counts.
+- Added owner-supplied bachelor's, diploma and SSC history to the appropriate career surfaces; retained one-page resume and two-page CV.
