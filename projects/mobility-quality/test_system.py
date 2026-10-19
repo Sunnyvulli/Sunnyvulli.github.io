@@ -1,6 +1,8 @@
 import csv, json, sqlite3, tempfile, unittest, threading, urllib.request, urllib.error
 from pathlib import Path
 from http.server import HTTPServer
+from unittest.mock import patch
+import hashlib
 from pipeline import run, validate, FIELDS
 from api import Handler
 
@@ -27,6 +29,100 @@ class SystemTests(unittest.TestCase):
         b, s = run(self.source, self.db)
         self.assertTrue(s)
         self.assertEqual(a, b)
+
+    def test_cache_repairs_modified_deleted_and_extra_observations(self):
+        original, _ = run(self.source, self.db)
+        with sqlite3.connect(self.db) as db:
+            expected_rows = db.execute(
+                "SELECT * FROM observations ORDER BY instant"
+            ).fetchall()
+        mutations = [
+            "UPDATE observations SET cnt=cnt+1 WHERE instant=1",
+            "UPDATE observations SET hum=hum-0.001 WHERE instant=1",
+            "DELETE FROM observations WHERE instant=1",
+            "INSERT INTO observations SELECT instant+100000,dteday||'x',season,yr,mnth,hr,holiday,weekday,workingday,weathersit,temp,atemp,hum,windspeed,casual,registered,cnt FROM observations WHERE instant=1",
+        ]
+        for mutation in mutations:
+            with self.subTest(mutation=mutation):
+                with sqlite3.connect(self.db) as db:
+                    self.assertEqual(
+                        db.execute(
+                            "SELECT * FROM observations ORDER BY instant"
+                        ).fetchall(),
+                        expected_rows,
+                    )
+                    db.execute(mutation)
+                repaired, cached = run(self.source, self.db)
+                self.assertFalse(cached)
+                self.assertEqual(repaired["source_sha256"], original["source_sha256"])
+                with sqlite3.connect(self.db) as db:
+                    self.assertEqual(
+                        db.execute(
+                            "SELECT * FROM observations ORDER BY instant"
+                        ).fetchall(),
+                        expected_rows,
+                    )
+                    self.assertEqual(
+                        db.execute(
+                            "SELECT COUNT(*),SUM(cnt) FROM observations"
+                        ).fetchone(),
+                        (17379, 3292679),
+                    )
+                replay, cached = run(self.source, self.db)
+                self.assertTrue(cached)
+                self.assertEqual(replay, repaired)
+
+    def test_hash_and_rows_use_same_source_bytes(self):
+        source = Path(self.tmp.name) / "changing.csv"
+        original = self.source.read_bytes()
+        source.write_bytes(original)
+        read_bytes = Path.read_bytes
+
+        def replace_after_read(path):
+            captured = read_bytes(path)
+            if path == source:
+                path.write_text("wrong_schema\n1\n")
+            return captured
+
+        with patch.object(Path, "read_bytes", replace_after_read):
+            report, _ = run(source, self.db)
+        self.assertEqual(report["source_sha256"], hashlib.sha256(original).hexdigest())
+        self.assertEqual(report["accepted_rows"], 17379)
+
+    def test_failed_replacement_rolls_back_rows_and_manifest(self):
+        original, _ = run(self.source, self.db)
+        replacement = Path(self.tmp.name) / "replacement.csv"
+        with replacement.open("w", newline="") as stream:
+            writer = csv.DictWriter(stream, fieldnames=FIELDS)
+            writer.writeheader()
+            writer.writerows(self.raw[:2])
+        with sqlite3.connect(self.db) as db:
+            before = db.execute(
+                "SELECT * FROM observations ORDER BY instant"
+            ).fetchall()
+            manifests = db.execute("SELECT * FROM batch_manifest").fetchall()
+            active = db.execute("SELECT * FROM active_snapshot").fetchall()
+            db.execute(
+                "CREATE TRIGGER fail_insert BEFORE INSERT ON observations BEGIN SELECT RAISE(ABORT, 'injected failure'); END"
+            )
+        with self.assertRaises(sqlite3.IntegrityError):
+            run(replacement, self.db)
+        with sqlite3.connect(self.db) as db:
+            self.assertEqual(
+                db.execute("SELECT * FROM observations ORDER BY instant").fetchall(),
+                before,
+            )
+            self.assertEqual(
+                db.execute("SELECT * FROM batch_manifest").fetchall(), manifests
+            )
+            self.assertEqual(
+                db.execute("SELECT * FROM active_snapshot").fetchall(), active
+            )
+            db.execute("DROP TRIGGER fail_insert")
+        self.assertEqual(run(self.source, self.db), (original, True))
+        recovered, cached = run(replacement, self.db)
+        self.assertFalse(cached)
+        self.assertEqual(recovered["accepted_rows"], 2)
 
     def test_fault_types(self):
         rows = [r.copy() for r in self.raw[:4]]

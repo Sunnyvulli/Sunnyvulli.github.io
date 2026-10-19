@@ -10,7 +10,7 @@
 | [Reproducible study](research/mobility-study.pdf) | Measured evaluation, leakage controls, fault injection, limitations; unpublished draft |
 | [Teaching lab](teaching/data-reliability-lab.md) | SQL/Python lesson with exercises, expected answers, and scoring rubric |
 
-The flagship project uses 17,379 real hourly observations with source/license attribution. Ten tests (seven system and three temporal-protocol tests) pass locally. CI runs the tests and a pinned-dependency evaluation. The containerized API has a dedicated CI build, non-root runtime, HTTP-contract, and read-only-filesystem check. GitHub Pages serves static content; the Python API runs locally.
+The flagship project uses 17,379 real hourly observations with source/license attribution. Thirteen tests (ten system and three temporal-protocol tests) pass locally. CI runs the tests and a pinned-dependency evaluation. The containerized API has a dedicated CI build, non-root runtime, HTTP-contract, and read-only-filesystem check. GitHub Pages serves static content; the Python API runs locally.
 
 ## Repository layout
 
@@ -30,7 +30,7 @@ Prerequisites: Python 3.11+ and GNU Make. No account, API key, or dependency ins
 make run
 ```
 
-This loads the real dataset twice into an isolated temporary database, checks expected totals, and executes ten tests (seven system and three temporal-protocol tests). The full research reproduction below installs scientific dependencies separately. A run under five minutes is only claimed for the recorded test environment, not every clean machine.
+This loads the real dataset twice into an isolated temporary database, checks expected totals, and executes thirteen tests (ten system and three temporal-protocol tests). The full research reproduction below installs scientific dependencies separately. A run under five minutes is only claimed for the recorded test environment, not every clean machine.
 
 ## Reproduce
 
@@ -47,7 +47,7 @@ python evaluate.py
 SQLite keeps the complete local data path inspectable without account setup or paid services. SQL parameters protect query inputs. Dataset hashes and batch manifests support repeatable loading. Calendar and count reconciliation supplement domain checks. Missing observations are not fabricated. Evaluation separates temporal assessment from shuffled splits and explicitly identifies an invalid leakage control.
 
 ## Limitations and roadmap
-This is historical system-wide data, not live station-level availability. No client adoption, distributed cloud deployment, or published research is claimed. Next: whole-day rolling-origin evaluation, stronger time-series baselines, and a second dataset. Additional separate repositories should be created only when distinct projects are complete enough to inspect. No empty repositories are created to fill a pin quota.
+This is historical system-wide data, not live station-level availability. No client adoption, distributed cloud deployment, or published research is claimed. Whole-day temporal evaluation and an online weekly-lag baseline are implemented. Next: independent dataset validation and a distinct cloud artifact with actual deployment evidence. Additional separate repositories should be created only when distinct projects are complete enough to inspect. No empty repositories are created to fill a pin quota.
 
 Software licensing: projects/mobility-quality/LICENSE. Dataset attribution: projects/mobility-quality/data/SOURCE.md. Resume credentials follow the supplied resume; external verification links are still needed.
 

@@ -28,7 +28,7 @@ Run these tasks yourself and record explanations and a commit. A working impleme
 
 1. Run `make run`. Explain why 165 missing hours must not become zero rentals.
 2. Trace `pipeline.py` from CSV hash through validation to the transaction. Explain why a JSON export failure does not roll back SQLite.
-3. Explain why cached replay still reads and validates the source, and how an out-of-band database edit can invalidate the cache assumption.
+3. Explain why cached replay reads and validates the source and compares all stored observation fields. Demonstrate a changed row being repaired and explain the added read/sort and writer-lock cost.
 4. Modify validation to reject an additional realistic contract violation. Add a failing regression test first; explain the compatibility consequence.
 5. Demonstrate HTTP 400, 404, and 503 and explain parameterized SQL and read-only database access.
 6. Explain the temporal backtest and why its weekly-lag baseline is not a fixed 28-day-ahead forecast.

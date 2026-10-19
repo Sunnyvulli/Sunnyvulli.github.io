@@ -29,3 +29,12 @@ Whole-day rolling-origin evaluation with a lag-aware seasonal baseline, then bro
 - Calendar forest weighted MAE 49.766; online weekly lag 64.031; no future-weather inputs.
 - Recorded nine seeded model fits, six baseline evaluations, fold boundaries/fallback counts, and 84 paired daily errors.
 - Added three temporal tests and documented online information availability and exploratory bootstrap limitations.
+
+
+## 2026-10-19: Verified snapshot replay
+- Closed a reproduced stale-cache defect: modified, deleted, and added observations no longer reuse a cached report; replay validates all fields and reloads drift atomically.
+- Hashing and parsing now use the same captured source bytes, including when the path is replaced after the read.
+- An injected SQLite insert failure preserves all prior rows, manifest records, and active hash; retry succeeds.
+- Thirteen flagship tests and four earlier data-quality tests passed locally. The isolated real-data smoke path passed in 4.698 seconds on Python 3.12.14 (one local run, not a performance guarantee).
+- Source hash and historical study metrics are unchanged. Resume, cover letter, CV, and portfolio test counts are synchronized to 13; no qualification or publication claim is added.
+- The rolling-origin/seasonal-baseline, full-history scan, and Docker CI work listed above is already implemented. Remaining priorities: independent source validation, a distinct useful cloud artifact with actual run evidence, and owner/API-dependent metadata and release work.

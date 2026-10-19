@@ -37,3 +37,10 @@ This is a documented content version; a GitHub release/tag has not been created.
 - Added an interactive pipeline illustration and keyboard-accessible project explorer.
 - Prioritized real project evidence and current research methods, with preserved caveats/source links.
 - Added employer/faculty emphasis, document access, reduced-motion support, and section navigation.
+
+
+## Unreleased - 2026-10-19
+- Verify all observation fields before reusing a cached audit and atomically repair drift.
+- Hash and parse one captured input byte sequence; serialize snapshot checks with SQLite writers.
+- Add regressions for observation drift, source replacement, and failed-replacement rollback/retry (13 flagship tests).
+- Synchronize portfolio and application-document test counts; retain historical evaluation outputs. No version tag or release is created by this change.

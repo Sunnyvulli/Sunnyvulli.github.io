@@ -19,7 +19,7 @@ https://github.com/Sunnyvulli/Data-Engineer_AI
 
 Mobility Quality Lab | October 2026 | Technical portfolio
 https://github.com/Sunnyvulli/Sunnyvulli.github.io/tree/main/projects/mobility-quality
-- Python/SQLite pipeline and read-only local API for 17,379 historical UCI observations; data contracts, transactional loading, input hashes, and 10 passing tests.
+- Python/SQLite pipeline and read-only local API for 17,379 historical UCI observations; data contracts, transactional loading, input hashes, and 13 passing tests.
 - Whole-day temporal backtest and baseline comparisons; no production adoption claimed.
 
 UNPUBLISHED WRITING AND TEACHING
