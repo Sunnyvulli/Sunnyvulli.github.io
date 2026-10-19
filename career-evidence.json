@@ -32,13 +32,13 @@
       "id": "lakehouse",
       "title": "Lakehouse Guardian",
       "url": "https://github.com/Sunnyvulli/lakehouse-guardian",
-      "source_commit": "e1e5ffb9cd4a2bb9cf04150de721e0d355f7b540",
-      "behavioral_tests": 11,
+      "source_commit": "9cbdb2a607337c9c2733c52dfbc26659df4208da",
+      "behavioral_tests": 13,
       "controlled_batches": 21,
       "row_precision": 1.0,
       "row_recall": 0.8,
       "verified_on": "2026-10-19",
-      "scope": "Local Spark/Iceberg/dbt workflow; actual Airflow execution and Terraform validation in CI. No AWS apply or learned planner.",
+      "scope": "Local Spark/Iceberg/dbt dimensional mart; actual Airflow CI and Terraform validation. Full-refresh temporary mart; no AWS apply, CDC or learned planner.",
       "document_checks": [
         "Lakehouse Guardian",
         "21 controlled",
@@ -47,7 +47,11 @@
         "Terraform"
       ],
       "release": "v0.1.0",
-      "release_url": "https://github.com/Sunnyvulli/lakehouse-guardian/releases/tag/v0.1.0"
+      "release_url": "https://github.com/Sunnyvulli/lakehouse-guardian/releases/tag/v0.1.0",
+      "dbt_data_checks": 25,
+      "review_status": "Independent technical review requested; no external review received",
+      "review_url": "https://github.com/Sunnyvulli/lakehouse-guardian/issues/7",
+      "unreleased_changes": "Dimensional mart, 25 dbt data checks and 13 Python tests are after v0.1.0"
     },
     {
       "id": "mcp",

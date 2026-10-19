@@ -67,3 +67,4 @@ This is a documented content version; a GitHub release/tag has not been created.
 - Added owner-provided LinkedIn contact link to portfolio and application documents; preserved verified facts and document page counts.
 - Added owner-supplied bachelor's, diploma and SSC history to the appropriate career surfaces; retained one-page resume and two-page CV.
 - Added AI-platform/agentic cover-letter variant, direct project links and four-document CI validation; recorded fresh public visibility audit and remaining metadata/pin access limits.
+- Strengthened Lakehouse project evidence with a dimensional mart, 25 dbt data checks and 13 Python tests; synchronized resume/CV/portfolio and linked the pending independent technical review request.
