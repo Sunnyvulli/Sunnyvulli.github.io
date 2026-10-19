@@ -1,0 +1,68 @@
+{
+  "input_rows": 10,
+  "accepted_rows": 4,
+  "rejected_rows": 6,
+  "reason_counts": {
+    "duplicate_order_id": 1,
+    "missing_customer_id": 1,
+    "invalid_date": 1,
+    "invalid_amount": 2,
+    "missing_order_id": 1
+  },
+  "quarantine": [
+    {
+      "line": 4,
+      "order_id": "O002",
+      "reasons": [
+        "duplicate_order_id"
+      ]
+    },
+    {
+      "line": 5,
+      "order_id": "O003",
+      "reasons": [
+        "missing_customer_id"
+      ]
+    },
+    {
+      "line": 6,
+      "order_id": "O004",
+      "reasons": [
+        "invalid_date"
+      ]
+    },
+    {
+      "line": 7,
+      "order_id": "O005",
+      "reasons": [
+        "invalid_amount"
+      ]
+    },
+    {
+      "line": 9,
+      "order_id": "O007",
+      "reasons": [
+        "invalid_amount"
+      ]
+    },
+    {
+      "line": 10,
+      "order_id": "",
+      "reasons": [
+        "missing_order_id"
+      ]
+    }
+  ],
+  "daily_totals": [
+    {
+      "date": "2026-01-01",
+      "orders": 2,
+      "amount_cents": 20000
+    },
+    {
+      "date": "2026-01-02",
+      "orders": 2,
+      "amount_cents": 4025
+    }
+  ]
+}

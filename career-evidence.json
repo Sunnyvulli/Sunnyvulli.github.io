@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "research_repository": "https://github.com/Sunnyvulli/Data-Engineer_AI",
+  "research_commit": "e1f8109c318c3148cabecc59666a4d4164e40100",
+  "research_test_count": 58,
+  "mobility_test_count": 10,
+  "projects": [
+    {
+      "id": "phishing",
+      "title": "Phishing feature robustness",
+      "description": "Grouped robustness and raw-URL studies, plus a paired screenshot/URL benchmark on 7,050 provider-labelled examples.",
+      "detail": "Three seeds: URL ranking exceeded compact image and equal-fusion baselines. Collection and component-size limits remain.",
+      "url": "https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/results/validation/REPORT.md"
+    },
+    {
+      "id": "checkpoints",
+      "title": "Citation-support checkpoints",
+      "description": "ALCE sentence-level transfer and independent RAGTruth evaluation on 900 answers from 150 question groups.",
+      "detail": "Source-only thresholds expose missed unsupported answers and high review burden. A manuscript draft is available; not peer reviewed.",
+      "url": "https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/docs/paper/MANUSCRIPT.md"
+    },
+    {
+      "id": "transients",
+      "title": "Early transient prioritisation",
+      "description": "RAPID-inspired GRU versus a frozen forest on matched three-day simulated PLAsTiCC observations.",
+      "detail": "One seed; both models missed the two independent targets at the 5% budget. No observed-event performance claim.",
+      "url": "https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/results/followup/RECURRENT_REPORT.md"
+    }
+  ]
+}

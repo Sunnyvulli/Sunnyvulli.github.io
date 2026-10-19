@@ -1,0 +1,18 @@
+HANUMANTHA RAO VULLI
+Denton, TX | +1 940-594-4797 | vullihanumantharao@gmail.com
+Portfolio: https://sunnyvulli.github.io/ | GitHub: https://github.com/Sunnyvulli
+
+Dear Hiring Manager,
+
+I am seeking a data engineering role where I can contribute to reliable pipelines, usable analytics, and maintainable backend services. I hold a Master of Science in Data Engineering from the University of North Texas. My professional background combines AWS data workflows, SQL, and Java development with Spring Boot.
+
+At PRC Cloud Tech, I contribute to ingestion and ETL workflows, write and optimize SQL, support data validation, and help troubleshoot scheduled processing failures. Earlier roles involved PostgreSQL and Oracle query tuning, Spring Boot services integrated with AWS, and Jenkins and Docker delivery workflows. These responsibilities have reinforced the value of clear data checks and documentation that other engineers can use.
+
+My portfolio provides inspectable examples. Mobility Quality Lab processes 17,379 historical bike-rental observations through a Python and SQLite pipeline with semantic validation, transactional loading, and a read-only API. It includes ten passing tests and a reproducible temporal backtest. My Applied ML Research Suite adds three executed baselines covering phishing robustness, citation-support triage, and early transient ranking, with fifty-eight integrity tests, open entailment and recurrent-model comparisons, independent evaluation on 900 annotated answers, and a paired screenshot/URL study with documented negative findings. The repositories identify public data sources, and distinguish measured results from simulation and deployment limitations.
+
+I would welcome the opportunity to contribute my data and backend engineering experience to your team. I value collaborative debugging, clear technical communication, and practical improvements that make data dependable. My resume and portfolio provide the supporting detail, and I would be glad to discuss the requirements of a specific role.
+
+Thank you for your consideration.
+
+Sincerely,
+Hanumantha Rao Vulli

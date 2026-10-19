@@ -1,0 +1,44 @@
+HANUMANTHA RAO VULLI
+Academic CV | Data Engineering and Applied ML
+Denton, Texas | vullihanumantharao@gmail.com | +1 940-594-4797
+Portfolio: https://sunnyvulli.github.io/ | GitHub: https://github.com/Sunnyvulli
+
+EDUCATION
+Master of Science in Data Engineering | University of North Texas | December 2024
+
+RESEARCH INTERESTS
+Data quality, reproducible workflows, trustworthy applied ML, evidence evaluation, and early-event prioritisation.
+
+SELECTED RESEARCH AND ENGINEERING
+Applied ML Research Suite | October 2026 | Executed research baselines
+https://github.com/Sunnyvulli/Data-Engineer_AI
+- Phishing robustness: grouped UCI/raw-URL experiments and 7,050 screenshot/URL pairs; compact image fusion reduced ranking performance.
+- Citation support: 2,604 ALCE sentences and 900 independent RAGTruth answers; source-only calibration, clustered uncertainty and failure analysis.
+- Early transient ranking: RAPID-inspired GRU and forest comparison on simulated PLAsTiCC light curves, with a shared three-day cutoff.
+- Includes 58 integrity tests, checksums, batch scoring, measured outputs, and documented limits. No publication acceptance or production validation claimed.
+
+Mobility Quality Lab | October 2026 | Technical portfolio
+https://github.com/Sunnyvulli/Sunnyvulli.github.io/tree/main/projects/mobility-quality
+- Python/SQLite pipeline and read-only local API for 17,379 historical UCI observations; data contracts, transactional loading, input hashes, and 10 passing tests.
+- Whole-day temporal backtest and baseline comparisons; no production adoption claimed.
+
+UNPUBLISHED WRITING AND TEACHING
+Source Recall Does Not Guarantee Transfer: A Reproducible Audit of Evidence-Support Triage | Manuscript draft for author review, October 2026; not peer-reviewed or accepted.
+Data contracts and evaluation leakage in historical bike-rental analytics | Technical manuscript draft, October 2026; not peer-reviewed.
+Reliable analytics from real observations | SQL/Python teaching sample with exercises, answer key, and assessment rubric.
+
+PROFESSIONAL EXPERIENCE
+Data Engineer | PRC Cloud Tech, USA | January 2026 - Present
+AWS ingestion, ETL, reporting SQL, data validation, monitoring, and troubleshooting.
+Data Engineer | Tech Force, USA | September 2025 - January 2026
+AWS pipelines, PostgreSQL/Oracle query tuning, data-quality investigation, and CI/CD support.
+Data Engineer | Infosys Now, USA | April 2025 - September 2025
+Spring Boot services with AWS EC2, S3, and RDS; validation and workflow documentation.
+Java Full Stack Developer | DBS Technologies, India | July 2022 - May 2023
+Angular, Spring Boot REST APIs, AWS deployments, and Jenkins/Docker automation.
+
+TECHNICAL SKILLS
+Python, Java, SQL, JavaScript, TypeScript; Spring Boot, Angular, Hibernate; PostgreSQL, Oracle, MariaDB; AWS EC2, S3, RDS, Lambda, API Gateway; Docker, Jenkins, Terraform; JUnit, Mockito, Selenium.
+
+CERTIFICATIONS
+AWS Certified Data Engineer - Associate | Oracle Certified Professional: Java SE 17 Developer
