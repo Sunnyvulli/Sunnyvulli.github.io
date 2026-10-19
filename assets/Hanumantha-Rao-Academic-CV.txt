@@ -14,8 +14,8 @@ Applied ML Research Suite | October 2026 | Executed research baselines
 https://github.com/Sunnyvulli/Data-Engineer_AI
 - Phishing robustness: 11,055 historical UCI records, grouped splits, validation-selected thresholds, and feature-outage experiments.
 - Citation support: open entailment and lexical comparisons on 2,604 ALCE sentences, with question-disjoint corpus transfer.
-- Early transient ranking: 1,421,705 simulated PLAsTiCC observations, cutoff-safe features, and kilonova candidate prioritisation.
-- Includes 33 integrity tests, checksums, batch scoring, measured outputs, and documented limits. Developed with Codex assistance; no publication acceptance or production validation claimed.
+- Early transient ranking: RAPID-inspired GRU and forest comparison on simulated PLAsTiCC light curves, with a shared three-day cutoff.
+- Includes 43 integrity tests, checksums, batch scoring, measured outputs, and documented limits. Developed with Codex assistance; no publication acceptance or production validation claimed.
 
 Mobility Quality Lab | October 2026 | Technical portfolio
 https://github.com/Sunnyvulli/Sunnyvulli.github.io/tree/main/projects/mobility-quality

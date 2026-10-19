@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "research_repository": "https://github.com/Sunnyvulli/Data-Engineer_AI",
-  "research_commit": "127cdbead923e4d88b8664e299ddcdff2d8ce369",
-  "research_test_count": 33,
+  "research_commit": "f878fd0caa8c7a6ae104da1f827d7f9a3730f628",
+  "research_test_count": 43,
   "mobility_test_count": 10,
   "projects": [
     {
@@ -22,9 +22,9 @@
     {
       "id": "transients",
       "title": "Early transient prioritisation",
-      "description": "Kilonova candidate ranking from 1,421,705 simulated PLAsTiCC observations, using only data available at each alert cutoff.",
-      "detail": "Simulation only; both targets in the independent two-target test were missed at the 5% budget.",
-      "url": "https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/results/followup/REPORT.md"
+      "description": "RAPID-inspired GRU versus a frozen forest on matched three-day simulated PLAsTiCC observations.",
+      "detail": "One seed; both models missed the two independent targets at the 5% budget. No observed-event performance claim.",
+      "url": "https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/results/followup/RECURRENT_REPORT.md"
     }
   ]
 }

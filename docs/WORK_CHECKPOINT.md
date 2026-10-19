@@ -40,3 +40,8 @@ The original delivery above remains complete. A separate research-validation pha
 ## October 19 open-comparison continuation
 
 The next research release `127cdbead923e4d88b8664e299ddcdff2d8ce369` completes a bounded CPU NLI comparator and an independent one-class phishing-feed probe. Thirty-three research integrity tests pass locally. The profile, evidence cards and career document sources are synchronized with measured limitations and Codex assistance disclosed. The [active research checkpoint](https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/docs/followup/CHECKPOINT.md) retains the next matched astronomy comparison and observed-data work; continued research is not declared complete. Workflow verification for this new publication is recorded separately after remote execution.
+
+
+## Recurrent/admission release synchronization, October 19
+
+Research release: `f878fd0caa8c7a6ae104da1f827d7f9a3730f628`; 43 local integrity tests. The matched-input GRU adaptation and dated observed-data readiness audit are delivered at bounded scope, with missed targets, zero-row archive query and recovery failure documented. Career sources/PDFs and portfolio evidence are synchronized; visual/text/link and remote verification are recorded in the active research checkpoint after execution. The hourly research retry was found paused; existing portfolio maintenance remains active and explicitly includes post-change career audits. Scientific gaps remain distinct from completed engineering and bounded comparisons.

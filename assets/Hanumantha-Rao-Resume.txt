@@ -35,10 +35,10 @@ https://github.com/Sunnyvulli/Sunnyvulli.github.io/tree/main/projects/mobility-q
 - Processes 17,379 historical observations with source hashes, semantic validation, transactional loading, and a read-only API; includes 10 passing tests.
 - An 84-day backtest measured MAE of 49.77 versus 64.03 rentals/hour for an online weekly-lag baseline.
 
-Applied ML Research Suite | Python, pandas, scikit-learn
+Applied ML Research Suite | Python, pandas, scikit-learn, TensorFlow
 https://github.com/Sunnyvulli/Data-Engineer_AI
-- Three executed baselines: phishing feature robustness, citation-support triage, and early simulated-transient ranking; includes 33 integrity tests and offline batch scoring.
-- Adds open entailment-model and independent feed comparisons; retains failed results and limits. Developed with Codex assistance.
+- Three executed baselines: phishing feature robustness, citation-support triage, and early simulated-transient ranking; includes 43 integrity tests and offline batch scoring.
+- Adds open entailment and recurrent comparisons, independent-source probes, and documented failures. Developed with Codex assistance.
 
 EDUCATION
 Master of Science in Data Engineering | University of North Texas, Denton, TX | December 2024
