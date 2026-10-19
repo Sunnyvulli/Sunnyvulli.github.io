@@ -28,6 +28,7 @@ Lakehouse Guardian and Catalog Sentinel | October 2026 | Local reference systems
 https://github.com/Sunnyvulli/lakehouse-guardian
 https://github.com/Sunnyvulli/catalog-sentinel
 - Spark/Iceberg, dbt and Airflow data workflow with LangGraph approval gates: 21 controlled batches, row precision 1.00 and recall 0.80; plausible count inflation remains undetected.
+- Dimensional mart: 17,379 hourly facts and 731 observed dates; 25 dbt data checks and 13 Python tests. Full-refresh local models, not CDC or a cloud warehouse.
 - Read-only MCP tools: 14 behavioral tests; 13 expected denials enforced in 16 requests using actual stdio sessions. Host-assigned permissions, not remote authentication.
 - Local execution and green CI; Terraform S3/Glue configuration validated, not deployed to AWS. No learned planner or model-level attack benchmark.
 
