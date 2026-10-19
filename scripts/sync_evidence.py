@@ -22,7 +22,7 @@ def render():
     return (
         '<div class="grid" style="margin-top:28px">'
         + "".join(cards)
-        + '</div><p style="font-size:12px">Developed with Codex assistance. <a href="https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/results/SUMMARY.md">Measured results</a> · <a href="https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/docs/PROVENANCE.md">Sources and provenance</a> · <a href="https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/results/followup/REPORT.md">Follow-up validation report</a></p>'
+        + '</div><p style="font-size:12px">Developed with Codex assistance. <a href="https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/results/SUMMARY.md">Measured results</a> · <a href="https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/docs/PROVENANCE.md">Sources and provenance</a> · <a href="https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/results/followup/REPORT.md">Follow-up validation report</a> · <a href="https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/results/followup/OPEN_COMPARISON_REPORT.md">Open-model and independent-source results</a></p>'
     )
 
 

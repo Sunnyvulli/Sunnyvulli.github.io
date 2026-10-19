@@ -1,30 +1,30 @@
 {
   "schema_version": 1,
   "research_repository": "https://github.com/Sunnyvulli/Data-Engineer_AI",
-  "research_commit": "b54a701e311e11a5341b417a2c08e6ff868522b8",
-  "research_test_count": 27,
+  "research_commit": "127cdbead923e4d88b8664e299ddcdff2d8ce369",
+  "research_test_count": 33,
   "mobility_test_count": 10,
   "projects": [
     {
       "id": "phishing",
       "title": "Phishing feature robustness",
-      "description": "Historical UCI benchmark with 11,055 records. Grouped evaluation measures how feature outages affect detection.",
-      "detail": "Engineered features; no screenshot or live-campaign validation.",
-      "url": "https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/docs/PHISHING.md"
+      "description": "Feature robustness and raw-URL experiments, plus a one-snapshot OpenPhish agreement probe.",
+      "detail": "Provider labels; no benign controls or deployment accuracy claim.",
+      "url": "https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/results/followup/OPEN_COMPARISON_REPORT.md"
     },
     {
       "id": "checkpoints",
       "title": "Citation-support checkpoints",
-      "description": "Review-queue baselines evaluated on 2,604 human-labelled ALCE sentences from 200 questions.",
-      "detail": "Support triage, not factual verification or a student-learning trial.",
-      "url": "https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/docs/CHECKPOINTS.md"
+      "description": "Open entailment and lexical comparisons on 2,604 ALCE sentences, with source-only thresholds and corpus transfer.",
+      "detail": "NLI ranked lower in both directions; support triage, not factual verification.",
+      "url": "https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/results/followup/OPEN_COMPARISON_REPORT.md"
     },
     {
       "id": "transients",
       "title": "Early transient prioritisation",
       "description": "Kilonova candidate ranking from 1,421,705 simulated PLAsTiCC observations, using only data available at each alert cutoff.",
-      "detail": "Simulation benchmark; no telescope operation or live discovery claimed.",
-      "url": "https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/docs/TRANSIENTS.md"
+      "detail": "Simulation only; both targets in the independent two-target test were missed at the 5% budget.",
+      "url": "https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/results/followup/REPORT.md"
     }
   ]
 }

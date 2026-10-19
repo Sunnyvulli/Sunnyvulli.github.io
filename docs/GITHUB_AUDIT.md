@@ -85,3 +85,8 @@ Remote workflow results for the portfolio implementation commit: portfolio verif
 ## Follow-up validation release
 
 A subsequent research phase adds seven integrity tests (27 total), source-only ASQA/ELI5 transfer, raw-URL PhiUSIIL representation checks, and frozen-model independent simulation testing. The original astronomy pilot contained zero target events; the separately planned remaining-object test contained only two and missed both at the 5% budget. Sparse-event/bootstrap limitations are explicit. These results do not establish scientific novelty or real-world effectiveness. The research report and checkpoint are authoritative for current follow-up status. Career-document test counts were synchronized to 27.
+
+
+## October 19 research comparison release
+
+Research commit `127cdbead923e4d88b8664e299ddcdff2d8ce369` adds a hash-pinned, openly licensed CPU entailment comparison on ALCE and a frozen-model OpenPhish snapshot probe. NLI AP was lower than lexical AP in both transfer directions; its source-selected review policy missed the 90% recall goal in one direction. The one-class feed probe has provider labels and no benign controls, so its 297/299 agreement does not establish precision or deployment FPR. No raw feed URLs are published. Thirty-three local research integrity tests passed; optional runtime dependency scanning reported no advisories at scan time. Public IRSA access is verified, but matched specialised astronomy and observed-event evaluation remain unfinished. Current details are in [the measured report](https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/results/followup/OPEN_COMPARISON_REPORT.md). Career files reflect these bounded project changes only; no employment, education or credentials were added.
