@@ -1,7 +1,7 @@
 """Build the text-based, single-column resume. Requires reportlab."""
 
 from pathlib import Path
-from xml.sax.saxutils import escape
+from document_links import linked_text
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.platypus import SimpleDocTemplate, Paragraph
 from reportlab.pdfbase import pdfmetrics
@@ -38,34 +38,34 @@ styles = {
         "section",
         fontName="ResumeSansBold",
         fontSize=10.5,
-        leading=13,
-        spaceBefore=7,
-        spaceAfter=3,
+        leading=12,
+        spaceBefore=6,
+        spaceAfter=2,
         keepWithNext=True,
     ),
     "body": ParagraphStyle(
-        "body", fontName="ResumeSans", fontSize=10, leading=12.4, spaceAfter=2
+        "body", fontName="ResumeSans", fontSize=9.5, leading=11.5, spaceAfter=2
     ),
     "job": ParagraphStyle(
         "job",
         fontName="ResumeSansBold",
-        fontSize=9.8,
-        leading=12.3,
-        spaceBefore=3,
+        fontSize=9.5,
+        leading=11.5,
+        spaceBefore=2,
         spaceAfter=2,
         keepWithNext=True,
     ),
     "bullet": ParagraphStyle(
         "bullet",
         fontName="ResumeSans",
-        fontSize=10,
-        leading=12.4,
+        fontSize=9.5,
+        leading=11.5,
         leftIndent=8,
         firstLineIndent=-8,
         spaceAfter=2,
     ),
     "url": ParagraphStyle(
-        "url", fontName="ResumeSans", fontSize=8.4, leading=10.5, spaceAfter=3
+        "url", fontName="ResumeSans", fontSize=8.4, leading=10, spaceAfter=2
     ),
 }
 
@@ -96,7 +96,7 @@ def main():
             style = "job"
         else:
             style = "body"
-        flow.append(Paragraph(escape(line), styles[style]))
+        flow.append(Paragraph(linked_text(line), styles[style]))
     doc = SimpleDocTemplate(
         str(TARGET),
         pagesize=(612, 792),

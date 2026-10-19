@@ -2,10 +2,10 @@
 
 from pathlib import Path
 from reportlab.lib.styles import ParagraphStyle
-from reportlab.platypus import SimpleDocTemplate, Paragraph
+from reportlab.platypus import SimpleDocTemplate, Paragraph, PageBreak
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from xml.sax.saxutils import escape
+from document_links import linked_text
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -43,6 +43,8 @@ def main():
     ):
         if not line:
             continue
+        if line == "PROFESSIONAL EXPERIENCE":
+            flow.append(PageBreak())
         kind = (
             "name"
             if i == 0
@@ -52,7 +54,7 @@ def main():
                 else "url" if line.startswith("https://") else "body"
             )
         )
-        flow.append(Paragraph(escape(line), styles[kind]))
+        flow.append(Paragraph(linked_text(line), styles[kind]))
     SimpleDocTemplate(
         str(ROOT / "assets/Hanumantha-Rao-Academic-CV.pdf"),
         pagesize=(612, 792),

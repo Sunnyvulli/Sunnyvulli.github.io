@@ -47,3 +47,12 @@ Whole-day rolling-origin evaluation with a lag-aware seasonal baseline, then bro
 - Removed skills without visible responsibility/project support. Lambda/API Gateway remain grounded in the originally supplied PRC Cloud Tech responsibility; this is owner-supplied experience, not independent employer verification.
 - Focused CV interests on the owner's agentic-AI security/governance outreach; agent-specific evaluation remains explicitly a future direction.
 - Admissions facts, publication evidence, employer metrics, reasons for job changes, certification links, and consented referees remain owner-dependent. See docs/career-review.md.
+
+
+## 2026-10-19: Verified lakehouse and MCP career synchronization
+- Published Lakehouse Guardian through issue/PR #2 in its own repository; main commit a603c9e35bf4f68246c2580cf17dde50cfe9c7a3 has green local integration, actual Airflow, Terraform and full-history secret-scan checks. Eleven behavioral tests; 21 controlled batches yielded row precision 1.00 and recall 0.80, including the documented plausible-count miss.
+- Published Catalog Sentinel through issue/PR #2 in its own repository; main commit 4deaaee4fe678736b8d3923a5643adbd678b2221 has green protocol/security and secret-scan checks. Fourteen behavioral tests; actual stdio requests enforce 13 expected denials out of 16 requests, with unchanged database bytes.
+- Added these verified local artifacts to the resume, CV, cover letter and portfolio. Terraform supports configuration-validation evidence only; no cloud apply, paid endpoint, remote authentication or learned-planner benchmark is claimed.
+- Fixed the overlooked mobility_test_count manifest field (10 -> 13) and extended the career check to enforce manifest/discovered count agreement plus new project phrases.
+- Rebuilt the one-page resume and cover letter; academic CV now uses two deliberate pages. Source/PDF text, rendered layout, links and CI are reviewed before publication.
+- Hybrid retrieval remains local work awaiting its separate public-repository/CI milestone; no resume claim added. Owner facts requested in docs/career-review.md remain missing.

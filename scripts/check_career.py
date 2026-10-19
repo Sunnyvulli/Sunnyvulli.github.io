@@ -75,11 +75,19 @@ def main():
             raise ValueError(f"Public phone number reintroduced: {stem}")
         if normalized(source) != normalized(extracted):
             raise ValueError(f"Text/PDF drift: {stem}")
-        if len(reader.pages) != 1:
+        if len(reader.pages) != (2 if name == "Academic-CV" else 1):
             raise ValueError(f"Unexpected page count: {stem}")
+        pdf_urls = {
+            annotation.get_object().get("/A", {}).get("/URI")
+            for page in reader.pages
+            for annotation in page.get("/Annots", [])
+        }
+        source_urls = set(re.findall(r"https://[^\s<>]+", source))
+        if not source_urls.issubset(pdf_urls):
+            raise ValueError(f"Missing clickable document URL: {stem}")
         if any(len(page.images) for page in reader.pages):
             raise ValueError(f"Unexpected image in text-based document: {stem}")
-        if "Applied ML Research Suite" not in extracted:
+        if normalized("Applied ML Research Suite") not in normalized(extracted):
             raise ValueError(f"Research evidence missing: {stem}")
         results.append(
             {
@@ -91,6 +99,16 @@ def main():
         )
     evidence = json.loads((ROOT / "career-evidence.json").read_text())
     assert len(evidence["projects"]) == 3
+    if evidence["mobility_test_count"] != test_count:
+        raise ValueError("Manifest test count differs from discovered Mobility suite")
+    for project in evidence["engineering_projects"]:
+        if project["url"] not in page:
+            raise ValueError(f"Missing portfolio engineering link: {project['id']}")
+        for name in ("Resume", "Cover-Letter", "Academic-CV"):
+            source = (ROOT / "assets" / f"Hanumantha-Rao-{name}.txt").read_text()
+            for phrase in project["document_checks"]:
+                if phrase not in source:
+                    raise ValueError(f"Engineering evidence drift in {name}: {phrase}")
     print(
         json.dumps(
             {

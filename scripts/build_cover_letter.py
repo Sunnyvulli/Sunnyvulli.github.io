@@ -1,7 +1,7 @@
 """Build the matching, selectable-text cover letter. Requires reportlab."""
 
 from pathlib import Path
-from xml.sax.saxutils import escape
+from document_links import linked_text
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.styles import ParagraphStyle
@@ -34,12 +34,12 @@ def main():
         "body", fontName="LetterSans", fontSize=10.5, leading=16, spaceAfter=13
     )
     header = blocks.pop(0).splitlines()
-    flow.append(Paragraph(escape(header[0]), name))
+    flow.append(Paragraph(linked_text(header[0]), name))
     for line in header[1:]:
-        flow.append(Paragraph(escape(line), contact))
+        flow.append(Paragraph(linked_text(line), contact))
     flow.append(Spacer(1, 23))
     for block in blocks:
-        flow.append(Paragraph(escape(block).replace("\n", "<br/>"), body))
+        flow.append(Paragraph(linked_text(block).replace("\n", "<br/>"), body))
     SimpleDocTemplate(
         str(ROOT / "assets/Hanumantha-Rao-Cover-Letter.pdf"),
         pagesize=(612, 792),

@@ -1,47 +1,46 @@
 HANUMANTHA RAO VULLI
-Data Engineer | AWS | Python | SQL | Java | Spring Boot
+Data Engineer | Python | SQL | AWS | Spark | Backend Systems
 Denton, TX | vullihanumantharao@gmail.com
 Portfolio: https://sunnyvulli.github.io/ | GitHub: https://github.com/Sunnyvulli
 
 PROFESSIONAL SUMMARY
-Data engineer with experience supporting AWS pipelines, ETL workflows, relational databases, and Java backend services. MS in Data Engineering, with reproducible portfolio work in data quality and applied machine learning.
+Data engineer with AWS pipeline, SQL, and Java backend experience. MS in Data Engineering. Portfolio demonstrates local Spark/Iceberg processing, dbt validation, Airflow orchestration, approval-gated LangGraph workflows, and bounded MCP tools with reproducible evaluations.
 
 TECHNICAL SKILLS
-Languages: Python, SQL, Java, JavaScript
-Data: ETL, data validation, SQL optimization, PostgreSQL, Oracle
-Cloud and DevOps: AWS EC2, S3, RDS, Lambda, API Gateway; Docker, Jenkins
-Frameworks and Testing: Spring Boot, Angular, REST APIs; Python unittest, GitHub Actions
+Languages and Databases: Python, SQL, Java, JavaScript; PostgreSQL, Oracle, SQLite
+Data and Agent Tooling: Spark, Apache Iceberg, dbt, Airflow, LangGraph, MCP
+Cloud and Delivery: AWS EC2, S3, RDS, Lambda, API Gateway; Terraform, Docker, Jenkins, GitHub Actions
+Backend and Testing: Spring Boot, Angular, REST APIs, Python unittest
 
 PROFESSIONAL EXPERIENCE
 Data Engineer | PRC Cloud Tech, USA | January 2026 - Present
-- Contribute to AWS ingestion and ETL workflows preparing operational data for reporting and analytics.
-- Write and optimize SQL, validate reporting data, and support troubleshooting of pipelines and services integrating AWS Lambda, API Gateway, and RDS.
-
+- Contribute to AWS ingestion and ETL, reporting SQL, data validation, and troubleshooting services integrating Lambda, API Gateway, and RDS.
 Data Engineer | Tech Force, USA | September 2025 - January 2026
-- Supported AWS pipelines and investigated data-quality issues affecting downstream systems.
-- Tuned PostgreSQL and Oracle queries through SQL analysis and indexing; assisted with Jenkins and Docker delivery workflows.
-
+- Supported AWS pipelines and data-quality investigation; tuned PostgreSQL/Oracle queries through SQL analysis and indexing; assisted Jenkins/Docker delivery.
 Data Engineer | Infosys Now, USA | April 2025 - September 2025
-- Worked on Spring Boot services integrated with AWS EC2, S3, and RDS for structured data ingestion.
-- Checked missing and inconsistent records and documented service configurations and data workflows.
-
+- Worked on Spring Boot services with AWS EC2, S3, and RDS; checked missing/inconsistent records and documented ingestion workflows.
 Java Full Stack Developer | DBS Technologies, India | July 2022 - May 2023
-- Developed Angular features and Spring Boot REST APIs supporting application and database operations.
-- Assisted with AWS deployments and Jenkins/Docker automation; participated in sprint planning and code reviews.
+- Developed Angular features and Spring Boot REST APIs; assisted AWS deployments and Jenkins/Docker automation; participated in code reviews.
 
 SELECTED PROJECTS
-Mobility Quality Lab | Python, SQLite, Docker, GitHub Actions
-https://github.com/Sunnyvulli/Sunnyvulli.github.io/tree/main/projects/mobility-quality
-- Processes 17,379 historical UCI Bike Sharing observations with source hashes, semantic validation, transactional loading, and a read-only API; includes 13 passing tests.
-- An 84-day backtest measured MAE of 49.77 versus 64.03 rentals/hour for an online weekly-lag baseline.
-
-Applied ML Research Suite | Python, pandas, scikit-learn, TensorFlow
+Lakehouse Guardian | Spark, Iceberg, dbt, Airflow, LangGraph, Terraform
+https://github.com/Sunnyvulli/lakehouse-guardian
+- Processes 17,379 UCI Bike Sharing observations into local Iceberg snapshots; dbt checks precede publication and approval is bound to a proposal hash.
+- In 21 controlled fault batches, row detection precision was 1.00 and recall 0.80; documented missed plausible count inflation. Includes 11 behavioral tests and real Airflow execution in CI.
+- Terraform S3/Glue configuration passes provider validation in CI; AWS infrastructure has not been deployed.
+Catalog Sentinel | MCP, Python, SQLite, GitHub Actions
+https://github.com/Sunnyvulli/catalog-sentinel
+- Built two read-only MCP tools with host-assigned roles, strict schemas, bounded queries, and hashed audit records; 14 behavioral tests.
+- Actual stdio evaluation enforced all 13 expected denials across 16 requests and left database bytes unchanged; local host trust, not remote authentication.
+Mobility Quality Lab | Python, SQLite, Docker
+https://sunnyvulli.github.io/#work
+- Includes 13 passing tests; 84-day UCI Bike Sharing backtest measured MAE 49.77 versus 64.03 rentals/hour for an online weekly-lag baseline.
+Applied ML Research Suite | Reproducible baselines; 58 integrity tests
 https://github.com/Sunnyvulli/Data-Engineer_AI
-- Three executed baselines: phishing feature robustness, citation-support triage, and early simulated-transient ranking; includes 58 integrity tests and offline batch scoring.
-- Adds 900-answer external support validation, paired screenshot/URL evaluation, recurrent comparisons, and documented failures.
+- Citation-support triage, phishing robustness, and simulated-transient ranking; measured outputs and failure analysis. Writing is unpublished.
 
 EDUCATION
-Master of Science in Data Engineering | University of North Texas, Denton, TX | December 2024
+Master of Science in Data Engineering | University of North Texas | December 2024
 
 CERTIFICATIONS
 AWS Certified Data Engineer - Associate | Oracle Certified Professional: Java SE 17 Developer
