@@ -38,6 +38,7 @@ class SystemTests(unittest.TestCase):
             ).fetchall()
         mutations = [
             "UPDATE observations SET cnt=cnt+1 WHERE instant=1",
+            "UPDATE observations SET hum=hum-0.001 WHERE instant=1",
             "DELETE FROM observations WHERE instant=1",
             "INSERT INTO observations SELECT instant+100000,dteday||'x',season,yr,mnth,hr,holiday,weekday,workingday,weathersit,temp,atemp,hum,windspeed,casual,registered,cnt FROM observations WHERE instant=1",
         ]
@@ -55,6 +56,12 @@ class SystemTests(unittest.TestCase):
                 self.assertFalse(cached)
                 self.assertEqual(repaired["source_sha256"], original["source_sha256"])
                 with sqlite3.connect(self.db) as db:
+                    self.assertEqual(
+                        db.execute(
+                            "SELECT * FROM observations ORDER BY instant"
+                        ).fetchall(),
+                        expected_rows,
+                    )
                     self.assertEqual(
                         db.execute(
                             "SELECT COUNT(*),SUM(cnt) FROM observations"
