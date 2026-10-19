@@ -44,3 +44,9 @@ This is a documented content version; a GitHub release/tag has not been created.
 - Hash and parse one captured input byte sequence; serialize snapshot checks with SQLite writers.
 - Add regressions for observation drift, source replacement, and failed-replacement rollback/retry (13 flagship tests).
 - Synchronize portfolio and application-document test counts; retain historical evaluation outputs. No version tag or release is created by this change.
+
+
+## Unreleased - Career presentation review
+- Add discovered-test-count, dataset-name, and public-phone guards for application-document consistency.
+- Remove the current public PDF phone number, trim unsupported skills, name the UCI Bike Sharing dataset, and focus academic research interests.
+- Retain measured baseline results and honest unpublished status; record missing admissions and employment evidence without placeholders.

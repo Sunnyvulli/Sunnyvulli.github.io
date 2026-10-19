@@ -1,25 +1,25 @@
 HANUMANTHA RAO VULLI
-Academic CV | Data Engineering and Applied ML
-Denton, Texas | vullihanumantharao@gmail.com | +1 940-594-4797
+Academic CV | AI Security, Governance and Reliable Data
+Denton, Texas | vullihanumantharao@gmail.com
 Portfolio: https://sunnyvulli.github.io/ | GitHub: https://github.com/Sunnyvulli
 
 EDUCATION
 Master of Science in Data Engineering | University of North Texas | December 2024
 
 RESEARCH INTERESTS
-Data quality, reproducible workflows, trustworthy applied ML, evidence evaluation, and early-event prioritisation.
+Security and governance of agentic AI; evidence-supported decisions, data lineage, and reproducible evaluation. Current projects examine citation support and phishing robustness; agent-specific evaluation is a future research direction.
 
 SELECTED RESEARCH AND ENGINEERING
 Applied ML Research Suite | October 2026 | Executed research baselines
 https://github.com/Sunnyvulli/Data-Engineer_AI
-- Phishing robustness: grouped UCI/raw-URL experiments and 7,050 screenshot/URL pairs; compact image fusion reduced ranking performance.
 - Citation support: 2,604 ALCE sentences and 900 independent RAGTruth answers; source-only calibration, clustered uncertainty and failure analysis.
+- Phishing robustness: grouped UCI/raw-URL experiments and 7,050 screenshot/URL pairs; compact image fusion reduced ranking performance.
 - Early transient ranking: RAPID-inspired GRU and forest comparison on simulated PLAsTiCC light curves, with a shared three-day cutoff.
 - Includes 58 integrity tests, checksums, batch scoring, measured outputs, and documented limits. No publication acceptance or production validation claimed.
 
 Mobility Quality Lab | October 2026 | Technical portfolio
 https://github.com/Sunnyvulli/Sunnyvulli.github.io/tree/main/projects/mobility-quality
-- Python/SQLite pipeline and read-only local API for 17,379 historical UCI observations; data contracts, transactional loading, input hashes, and 13 passing tests.
+- Python/SQLite pipeline and read-only local API for 17,379 historical UCI Bike Sharing observations; data contracts, transactional loading, input hashes, and 13 passing tests.
 - Whole-day temporal backtest and baseline comparisons; no production adoption claimed.
 
 UNPUBLISHED WRITING AND TEACHING
@@ -29,7 +29,7 @@ Reliable analytics from real observations | SQL/Python teaching sample with exer
 
 PROFESSIONAL EXPERIENCE
 Data Engineer | PRC Cloud Tech, USA | January 2026 - Present
-AWS ingestion, ETL, reporting SQL, data validation, monitoring, and troubleshooting.
+AWS ingestion, ETL, reporting SQL, and troubleshooting services integrating Lambda, API Gateway, and RDS.
 Data Engineer | Tech Force, USA | September 2025 - January 2026
 AWS pipelines, PostgreSQL/Oracle query tuning, data-quality investigation, and CI/CD support.
 Data Engineer | Infosys Now, USA | April 2025 - September 2025
@@ -38,7 +38,7 @@ Java Full Stack Developer | DBS Technologies, India | July 2022 - May 2023
 Angular, Spring Boot REST APIs, AWS deployments, and Jenkins/Docker automation.
 
 TECHNICAL SKILLS
-Python, Java, SQL, JavaScript, TypeScript; Spring Boot, Angular, Hibernate; PostgreSQL, Oracle, MariaDB; AWS EC2, S3, RDS, Lambda, API Gateway; Docker, Jenkins, Terraform; JUnit, Mockito, Selenium.
+Python, Java, SQL, JavaScript; Spring Boot, Angular, REST APIs; PostgreSQL, Oracle; AWS EC2, S3, RDS, Lambda, API Gateway; Docker, Jenkins; Python unittest, GitHub Actions.
 
 CERTIFICATIONS
 AWS Certified Data Engineer - Associate | Oracle Certified Professional: Java SE 17 Developer

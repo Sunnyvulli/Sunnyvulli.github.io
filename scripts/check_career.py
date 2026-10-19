@@ -2,6 +2,7 @@
 
 import json
 import re
+import unittest
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlparse
@@ -32,8 +33,22 @@ def normalized(text):
 
 
 def main():
+    suite = unittest.defaultTestLoader.discover(
+        str(ROOT / "projects" / "mobility-quality")
+    )
+    if unittest.defaultTestLoader.errors:
+        raise ValueError("Cannot discover flagship tests")
+    test_count = suite.countTestCases()
+    page = (ROOT / "index.html").read_text()
+    declared_counts = re.findall(r"(\d+) passing tests", page)
+    plain_page = re.sub(r"<[^>]*>", "", page)
+    declared_counts += re.findall(r'"tests"\s*:\s*(\d+)', plain_page)
+    declared_counts += re.findall(r"(\d+)\s*PASSING TESTS", plain_page)
+    declared_counts += re.findall(r"number:'(\d+) tests", page)
+    if not declared_counts or any(int(n) != test_count for n in declared_counts):
+        raise ValueError("Portfolio test count differs from discovered suite")
     parser = Links()
-    parser.feed((ROOT / "index.html").read_text())
+    parser.feed(page)
     for link in parser.links:
         parsed = urlparse(link)
         if parsed.scheme or parsed.netloc:
@@ -50,6 +65,14 @@ def main():
         source = (ROOT / "assets" / f"{stem}.txt").read_text()
         reader = PdfReader(ROOT / "assets" / f"{stem}.pdf")
         extracted = "".join(page.extract_text() or "" for page in reader.pages)
+        if f"{test_count} passing tests" not in source:
+            raise ValueError(f"Flagship test count drift: {stem}")
+        if "UCI Bike Sharing" not in source:
+            raise ValueError(f"Dataset attribution missing: {stem}")
+        if re.search(
+            r"(?:\+1[\s.-]*)?\(?\d{3}\)?[\s.-]+\d{3}[\s.-]+\d{4}", source + extracted
+        ):
+            raise ValueError(f"Public phone number reintroduced: {stem}")
         if normalized(source) != normalized(extracted):
             raise ValueError(f"Text/PDF drift: {stem}")
         if len(reader.pages) != 1:
@@ -70,7 +93,12 @@ def main():
     assert len(evidence["projects"]) == 3
     print(
         json.dumps(
-            {"local_links_checked": len(parser.links), "documents": results}, indent=2
+            {
+                "flagship_tests": test_count,
+                "local_links_checked": len(parser.links),
+                "documents": results,
+            },
+            indent=2,
         )
     )
 

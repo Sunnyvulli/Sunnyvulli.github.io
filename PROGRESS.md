@@ -38,3 +38,12 @@ Whole-day rolling-origin evaluation with a lag-aware seasonal baseline, then bro
 - Thirteen flagship tests and four earlier data-quality tests passed locally. The isolated real-data smoke path passed in 4.698 seconds on Python 3.12.14 (one local run, not a performance guarantee).
 - Source hash and historical study metrics are unchanged. Resume, cover letter, CV, and portfolio test counts are synchronized to 13; no qualification or publication claim is added.
 - The rolling-origin/seasonal-baseline, full-history scan, and Docker CI work listed above is already implemented. Remaining priorities: independent source validation, a distinct useful cloud artifact with actual run evidence, and owner/API-dependent metadata and release work.
+
+
+## 2026-10-19: Career review follow-up
+- Fresh live HTML/resume/CV downloads already showed 13 flagship tests; added a discovery-based count consistency guard to stop future page/document drift.
+- Removed phone numbers from the current public resume, cover letter, and CV; historical copies are not erased.
+- Named the UCI Bike Sharing dataset in all three application documents and the portfolio.
+- Removed skills without visible responsibility/project support. Lambda/API Gateway remain grounded in the originally supplied PRC Cloud Tech responsibility; this is owner-supplied experience, not independent employer verification.
+- Focused CV interests on the owner's agentic-AI security/governance outreach; agent-specific evaluation remains explicitly a future direction.
+- Admissions facts, publication evidence, employer metrics, reasons for job changes, certification links, and consented referees remain owner-dependent. See docs/career-review.md.

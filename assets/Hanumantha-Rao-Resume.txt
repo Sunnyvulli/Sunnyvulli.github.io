@@ -1,21 +1,21 @@
 HANUMANTHA RAO VULLI
 Data Engineer | AWS | Python | SQL | Java | Spring Boot
-Denton, TX | +1 940-594-4797 | vullihanumantharao@gmail.com
+Denton, TX | vullihanumantharao@gmail.com
 Portfolio: https://sunnyvulli.github.io/ | GitHub: https://github.com/Sunnyvulli
 
 PROFESSIONAL SUMMARY
 Data engineer with experience supporting AWS pipelines, ETL workflows, relational databases, and Java backend services. MS in Data Engineering, with reproducible portfolio work in data quality and applied machine learning.
 
 TECHNICAL SKILLS
-Languages: Python, SQL, Java, JavaScript, TypeScript
-Data: ETL, data validation, SQL optimization, PostgreSQL, Oracle, MariaDB
-Cloud and DevOps: AWS EC2, S3, RDS, Lambda, API Gateway; Docker, Jenkins, Terraform
-Frameworks and Testing: Spring Boot, Angular, Hibernate/JPA, REST APIs, JUnit, Mockito, Selenium
+Languages: Python, SQL, Java, JavaScript
+Data: ETL, data validation, SQL optimization, PostgreSQL, Oracle
+Cloud and DevOps: AWS EC2, S3, RDS, Lambda, API Gateway; Docker, Jenkins
+Frameworks and Testing: Spring Boot, Angular, REST APIs; Python unittest, GitHub Actions
 
 PROFESSIONAL EXPERIENCE
 Data Engineer | PRC Cloud Tech, USA | January 2026 - Present
 - Contribute to AWS ingestion and ETL workflows preparing operational data for reporting and analytics.
-- Write and optimize SQL, validate reporting data, and help troubleshoot scheduled pipeline failures and AWS backend services.
+- Write and optimize SQL, validate reporting data, and support troubleshooting of pipelines and services integrating AWS Lambda, API Gateway, and RDS.
 
 Data Engineer | Tech Force, USA | September 2025 - January 2026
 - Supported AWS pipelines and investigated data-quality issues affecting downstream systems.
@@ -32,7 +32,7 @@ Java Full Stack Developer | DBS Technologies, India | July 2022 - May 2023
 SELECTED PROJECTS
 Mobility Quality Lab | Python, SQLite, Docker, GitHub Actions
 https://github.com/Sunnyvulli/Sunnyvulli.github.io/tree/main/projects/mobility-quality
-- Processes 17,379 historical observations with source hashes, semantic validation, transactional loading, and a read-only API; includes 13 passing tests.
+- Processes 17,379 historical UCI Bike Sharing observations with source hashes, semantic validation, transactional loading, and a read-only API; includes 13 passing tests.
 - An 84-day backtest measured MAE of 49.77 versus 64.03 rentals/hour for an online weekly-lag baseline.
 
 Applied ML Research Suite | Python, pandas, scikit-learn, TensorFlow

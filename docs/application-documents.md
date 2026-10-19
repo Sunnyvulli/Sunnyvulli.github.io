@@ -9,7 +9,7 @@
 The portfolio links these files directly. The resume keeps its existing URL, so existing profile links remain valid. The academic CV has its own plain-text source and PDF builder. All three include the reviewed Applied ML Research Suite evidence.
 
 ## Formatting choices
-All three PDFs use a single text column, embedded DejaVu Sans fonts, ordinary headings, and no graphics, tables, text boxes, or contact information in page headers/footers. Name, phone, email, location, and links are ordinary document text. Employer dates and job titles follow a consistent format. The resume includes verified portfolio measurements separately from employment responsibilities; no employer performance figures are invented.
+All three PDFs use a single text column, embedded DejaVu Sans fonts, ordinary headings, and no graphics, tables, text boxes, or contact information in page headers/footers. Name, email, location, and links are ordinary document text. Public versions omit the phone number. Previous commits, downloaded copies, and external caches may still contain the earlier public contact details; this edit does not rewrite history. Employer dates and job titles follow a consistent format. The resume includes verified portfolio measurements separately from employment responsibilities; no employer performance figures are invented.
 
 ## Executed checks
 Each PDF has one page, no image objects, and a size below 50 KB. pypdf recovered the complete text in the same order as the corresponding source file after whitespace normalization. Final pages were rendered and visually inspected. These are document/text-extraction checks, not tests inside Greenhouse, Workday, Lever, or a particular employer's ATS. No universal ATS score or interview outcome is guaranteed.
