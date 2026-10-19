@@ -66,3 +66,8 @@ Whole-day rolling-origin evaluation with a lag-aware seasonal baseline, then bro
 - Re-executed the current research snapshot's 58 integrity tests and saved-output audits. Removed CI path filters and added full-history scanning. Six tokenizer artifact SHA-256 false positives were reviewed and allowlisted only by exact historical fingerprints; a temporary synthetic-key probe remains detected. No history rewrite, model rerun or paper acceptance claim.
 - Synchronized the one-page resume/letter and two-page CV, canonical links, reviewed manifest and current Gold Standard audit. Rendered all four pages and verified source/PDF text and clickable links. Deployed bytes and final CI are verified after merge.
 - Remaining milestones: independent labels/semantic evaluation, durable approval/remote identity and a separately authorized AWS run; owner facts/evidence remain documented in docs/career-review.md.
+
+### Resume presentation refresh — 2026-10-19
+- Issue #17: improved one-page resume hierarchy, restrained color, section rules and embedded fonts without changing career facts.
+- Rendered and visually inspected the final PDF; corrected a system-font rendering issue by embedding DejaVu. Verified selectable source-text parity, clickable URLs, zero images, page count and all three document checks with `python scripts/check_career.py`; evidence synchronization passed.
+- Consistency review: portfolio, resume, cover letter and academic CV retain matching verified project claims. No new qualifications or results; no other document rewrite needed. ATS compatibility is a formatting goal, not a universal guarantee.
