@@ -2,6 +2,7 @@ HANUMANTHA RAO VULLI
 Data Engineer | Python | SQL | AWS | Spark | Backend Systems
 Denton, TX | vullihanumantharao@gmail.com
 Portfolio: https://sunnyvulli.github.io/ | GitHub: https://github.com/Sunnyvulli
+LinkedIn: https://www.linkedin.com/in/hanumantharaovulli/
 
 PROFESSIONAL SUMMARY
 Data engineer with AWS pipeline, SQL, and Java backend experience; MS in Data Engineering. Verified portfolio work spans Spark/Iceberg, dbt, Airflow, approval-gated LangGraph workflows, MCP tools and reproducible retrieval evaluations.

@@ -31,13 +31,13 @@ def main():
         "contact", fontName="LetterSans", fontSize=9, leading=13, spaceAfter=3
     )
     body = ParagraphStyle(
-        "body", fontName="LetterSans", fontSize=10.5, leading=16, spaceAfter=13
+        "body", fontName="LetterSans", fontSize=10.5, leading=16, spaceAfter=10
     )
     header = blocks.pop(0).splitlines()
     flow.append(Paragraph(linked_text(header[0]), name))
     for line in header[1:]:
         flow.append(Paragraph(linked_text(line), contact))
-    flow.append(Spacer(1, 23))
+    flow.append(Spacer(1, 16))
     for block in blocks:
         flow.append(Paragraph(linked_text(block).replace("\n", "<br/>"), body))
     SimpleDocTemplate(

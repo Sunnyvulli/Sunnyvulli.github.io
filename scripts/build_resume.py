@@ -61,7 +61,7 @@ styles = {
         fontSize=10,
         leading=12,
         textColor=ACCENT,
-        spaceBefore=6,
+        spaceBefore=4,
         spaceAfter=2,
         keepWithNext=True,
     ),
@@ -141,7 +141,7 @@ def main():
             style = "name"
         elif i == 1:
             style = "headline"
-        elif i in (2, 3):
+        elif i in (2, 3, 4):
             style = "contact"
         elif line.startswith("- "):
             style = "bullet"
@@ -155,7 +155,7 @@ def main():
             style = "body"
         text = heading_text(line, section) if style == "job" else linked_text(line)
         flow.append(Paragraph(text, styles[style]))
-        if i == 3:
+        if i == 4:
             flow.append(Spacer(1, 3))
     SimpleDocTemplate(
         str(TARGET),
