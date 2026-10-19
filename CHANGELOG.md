@@ -31,3 +31,9 @@ This is a documented content version; a GitHub release/tag has not been created.
 - Rebuilt the resume as an embedded-font, single-column, selectable-text PDF using the supplied resume and verified portfolio results.
 - Added a matching general data-engineering cover letter, editable text sources, build scripts, and download links.
 - Both documents are one page; pypdf and Poppler recover the full text in source order.
+
+### Portfolio presentation redesign
+- Introduced a charcoal/ivory editorial layout, lime accents, and a clearer personal introduction.
+- Added an interactive pipeline illustration and keyboard-accessible project explorer.
+- Prioritized real project evidence and current research methods, with preserved caveats/source links.
+- Added employer/faculty emphasis, document access, reduced-motion support, and section navigation.
