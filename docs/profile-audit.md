@@ -1,5 +1,7 @@
 # GitHub Gold Standard audit
 
+Reliability update, 2026-10-19: 13 flagship tests plus four earlier data-quality tests pass locally. Cached replay now verifies every observation field, repairs drift, and binds parsing to hashed bytes. See [build and regression evidence](build-notes-reliability.md). The historical scores/inventory below are not reclassified by this reliability change; metadata and actual tag/release remain unverified.
+
 Update, 2026-10-19: the inventory below is historical. Data-Engineer_AI now contains the applied ML research suite and should not be archived on the basis of its earlier introductory README. See [current evidence and remaining gaps](profile-evidence-next-steps.md). A fresh local smoke run and all 14 system/data-quality tests passed; the new workload harness also verified five historical batch loads, deterministic replay, and invalid-schema recovery. This does not verify cloud operation, employment, certifications, or personal code ownership.
 
 Audit date: 2026-10-18. Scope: public repository inventory, available source/documentation, fresh portfolio clone, executed smoke run, known-format history scan, and GitHub Actions. Scores award only demonstrated criteria. Unverified items receive zero; zero does not necessarily mean defective. The special profile README repository is not a software project and is exempt from the runnable-project rubric.

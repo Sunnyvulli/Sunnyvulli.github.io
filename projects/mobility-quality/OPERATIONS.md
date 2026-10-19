@@ -8,7 +8,7 @@ Run pipeline.py with --input, --database and --output paths. Preserve raw CSV an
 - SQLite lock: stop the competing writer and retry the same source. Do not delete the database to resolve a lock.
 - JSON export failure: correct output permissions/path and rerun; the audit remains in batch_manifest.
 - API 503: run the pipeline against the API's database path, then retry health.
-- Unexpected results with a cached hash: investigate out-of-band edits; restore database from a known source rather than trusting cached metadata.
+- Unexpected results with a cached hash: rerun the known attributed input. Replay now compares all observation fields and transactionally reloads modified, missing, or extra observations. Investigate the cause; schema and audit metadata remain trusted, so arbitrary hostile edits require rebuilding from the known source.
 
 ## API contract
 GET /health → 200 JSON {status, rows}; missing database tables → 503.

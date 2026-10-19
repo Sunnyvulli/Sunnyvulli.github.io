@@ -1,6 +1,6 @@
 """Auditable batch pipeline for historical UCI bike-sharing observations."""
 
-import argparse, csv, hashlib, json, sqlite3, time
+import argparse, csv, hashlib, io, json, sqlite3, time
 from collections import Counter
 from datetime import date
 from pathlib import Path
@@ -86,16 +86,19 @@ def validate(rows, semantic=True):
 def run(source, db_path):
     start = time.perf_counter()
     source = Path(source)
-    digest = hashlib.sha256(source.read_bytes()).hexdigest()
-    with source.open(newline="") as f:
-        reader = csv.DictReader(f)
-        if reader.fieldnames != FIELDS:
-            raise ValueError("Unexpected schema; prior snapshot preserved")
-        rows = list(reader)
+    # Hash and parse one captured byte sequence, even if the path is replaced.
+    source_bytes = source.read_bytes()
+    digest = hashlib.sha256(source_bytes).hexdigest()
+    reader = csv.DictReader(io.StringIO(source_bytes.decode("utf-8"), newline=""))
+    if reader.fieldnames != FIELDS:
+        raise ValueError("Unexpected schema; prior snapshot preserved")
+    rows = list(reader)
     accepted, rejected = validate(rows)
     if not accepted:
         raise ValueError("No valid records; prior snapshot preserved")
     with sqlite3.connect(db_path) as db:
+        # Keep the cache check and any replacement under one writer transaction.
+        db.execute("BEGIN IMMEDIATE")
         db.execute(
             "CREATE TABLE IF NOT EXISTS observations (instant INTEGER PRIMARY KEY,dteday TEXT,season INTEGER,yr INTEGER,mnth INTEGER,hr INTEGER,holiday INTEGER,weekday INTEGER,workingday INTEGER,weathersit INTEGER,temp REAL,atemp REAL,hum REAL,windspeed REAL,casual INTEGER,registered INTEGER,cnt INTEGER,UNIQUE(dteday,hr))"
         )
@@ -111,12 +114,23 @@ def run(source, db_path):
         active = db.execute(
             "SELECT sha256 FROM active_snapshot WHERE singleton=1"
         ).fetchone()
-        if cached and active and active[0] == digest:
+        expected = [tuple(row[k] for k in FIELDS) for row in accepted]
+        columns = ",".join(FIELDS)
+        snapshot_matches = (
+            cached
+            and active
+            and active[0] == digest
+            and db.execute(
+                f"SELECT {columns} FROM observations ORDER BY instant"
+            ).fetchall()
+            == sorted(expected, key=lambda row: row[0])
+        )
+        if snapshot_matches:
             return json.loads(cached[0]), True
         db.execute("DELETE FROM observations")
         db.executemany(
             "INSERT INTO observations VALUES (" + ",".join("?" for _ in FIELDS) + ")",
-            [[r[k] for k in FIELDS] for r in accepted],
+            expected,
         )
         daily = [
             {"date": d, "observed_hours": n, "rentals": v}

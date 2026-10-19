@@ -9,7 +9,7 @@ Reporting and prediction systems can produce plausible numbers even when inputs 
 
 ## One-command verification
 
-From the repository root, run `make run` (Python 3.11+ and GNU Make required). This exercises real ingestion, repeat handling, and ten tests (seven system and three temporal-protocol tests) without installing dependencies. Research evaluation remains a separate command below.
+From the repository root, run `make run` (Python 3.11+ and GNU Make required). This exercises real ingestion, repeat handling, and thirteen tests (ten system and three temporal-protocol tests) without installing dependencies. Research evaluation remains a separate command below.
 
 ## Quick start
 Python 3.11+ recommended. Pipeline and API use only the standard library. Evaluation dependencies are pinned in requirements.txt.
@@ -26,7 +26,7 @@ python api.py
 Open http://127.0.0.1:8080/health or http://127.0.0.1:8080/daily?start=2012-01-01&end=2012-01-07 . The API runs locally; GitHub Pages hosts the static portfolio and result files, not a Python server. Local API defaults to loopback; the container explicitly binds within its isolated network and publishes only to host loopback.
 
 ## Architecture
-Immutable attributed CSV → parse and domain validation → calendar/count/key reconciliation → atomic SQLite snapshot + batch audit → parameterized read-only API and static report. SHA-256 identifies each input. Repeating the active batch returns its cached audit without adding rows. A historical batch can be reactivated explicitly by passing its file.
+Immutable attributed CSV → parse and domain validation → calendar/count/key reconciliation → atomic SQLite snapshot + batch audit → parameterized read-only API and static report. SHA-256 identifies each input. Repeating the active batch returns its cached audit only after every stored observation matches the validated source; drift triggers transactional replacement. Hashing and parsing use the same captured input bytes. A historical batch can be reactivated explicitly by passing its file.
 
 ## Data contract
 - Required schema must match the published hourly file.
@@ -38,10 +38,10 @@ Immutable attributed CSV → parse and domain validation → calendar/count/key 
 ## Executed results
 17,379 accepted observations, 731 observed days, 3,292,679 rentals, and 165 missing date-hour slots within those days. No original row violated the implemented contract. This does not establish that the underlying data are error-free. See results/pipeline.json for the complete audit.
 
-Seven integration/unit tests cover real-data reconciliation, idempotency, fault types, invalid schema, empty input, and actual HTTP requests with success and error responses. Prediction and fault-injection measurements are in results/evaluation.json; see the research note for interpretation.
+Ten system tests cover real-data reconciliation, idempotency, fault types, invalid schema, empty input, actual HTTP responses, observation-drift repair, exact input-byte provenance, and rollback after an injected SQLite write failure. Prediction and fault-injection measurements are in results/evaluation.json; see the research note for interpretation.
 
 ## Operational choices and limitations
-Snapshot replacement, observations, and audit metadata commit in one SQLite transaction. Empty/invalid-schema batches preserve the prior snapshot. The exported JSON is downstream of that transaction; file-write failure does not roll back SQLite. Whole-file reads use memory and are unsuitable for unbounded streams. The cache assumes no out-of-band database edits. No authentication or TLS is implemented, so the API binds only to localhost. SQLite serves one local process; distributed operations and cloud scaling are not claimed. HTTP HEAD is not implemented. Input identifiers are dataset record IDs, not personally identifying customer records.
+Snapshot replacement, observations, and audit metadata commit in one SQLite transaction. Empty/invalid-schema batches preserve the prior snapshot. The exported JSON is downstream of that transaction; file-write failure does not roll back SQLite. Whole-file reads use memory and are unsuitable for unbounded streams. Replay compares all observation fields under an immediate writer transaction and repairs modified, deleted, or added observations. This adds a complete snapshot read and a source-row sort on replay. The source file and database schema/audit metadata remain trusted inputs; this is consistency verification, not tamper-proof storage. No authentication or TLS is implemented, so the API binds only to localhost. SQLite serves one local process; distributed operations and cloud scaling are not claimed. HTTP HEAD is not implemented. Input identifiers are dataset record IDs, not personally identifying customer records.
 
 ## Role relevance
 - Data engineering: contracts, data lineage, deterministic loads, SQL aggregation, audit output, and CI.
@@ -74,7 +74,7 @@ flowchart TD
 
 ## Highlights
 - 17,379 real historical observations covering 731 dates.
-- Ten tests (seven system and three temporal-protocol tests), including actual HTTP responses and snapshot preservation.
+- Thirteen tests (ten system and three temporal-protocol tests), including actual HTTP responses and snapshot preservation.
 - Three-seed assessment: forest MAE 45.687 rentals/hour on a chronological holdout; lower shuffled error is reported separately.
 - 54 controlled fault-policy evaluations; raw results and limitations included.
 
