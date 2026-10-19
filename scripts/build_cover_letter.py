@@ -1,5 +1,6 @@
 """Build the matching, selectable-text cover letter. Requires reportlab."""
 
+import argparse
 from pathlib import Path
 from document_links import linked_text
 from reportlab.pdfbase import pdfmetrics
@@ -17,12 +18,11 @@ pdfmetrics.registerFont(
 
 
 def main():
-    blocks = (
-        (ROOT / "assets/Hanumantha-Rao-Cover-Letter.txt")
-        .read_text()
-        .strip()
-        .split("\n\n")
-    )
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--variant", choices=("data", "agentic"), default="data")
+    variant = parser.parse_args().variant
+    stem = "Hanumantha-Rao-Cover-Letter" + ("-Agentic" if variant == "agentic" else "")
+    blocks = (ROOT / "assets" / f"{stem}.txt").read_text().strip().split("\n\n")
     flow = []
     name = ParagraphStyle(
         "name", fontName="LetterSansBold", fontSize=18, leading=23, spaceAfter=5
@@ -41,13 +41,15 @@ def main():
     for block in blocks:
         flow.append(Paragraph(linked_text(block).replace("\n", "<br/>"), body))
     SimpleDocTemplate(
-        str(ROOT / "assets/Hanumantha-Rao-Cover-Letter.pdf"),
+        str(ROOT / "assets" / f"{stem}.pdf"),
         pagesize=(612, 792),
         leftMargin=47,
         rightMargin=47,
         topMargin=42,
         bottomMargin=40,
-        title="Hanumantha Rao Vulli - Data Engineering Cover Letter",
+        title="Hanumantha Rao Vulli - "
+        + ("AI Platform" if variant == "agentic" else "Data Engineering")
+        + " Cover Letter",
         author="Hanumantha Rao Vulli",
     ).build(flow)
 

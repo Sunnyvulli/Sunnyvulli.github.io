@@ -1,0 +1,24 @@
+HANUMANTHA RAO VULLI
+Denton, TX | vullihanumantharao@gmail.com
+Portfolio: https://sunnyvulli.github.io/ | GitHub: https://github.com/Sunnyvulli
+LinkedIn: https://www.linkedin.com/in/hanumantharaovulli/
+
+Dear Hiring Manager,
+
+I am seeking an AI-platform or agent-engineering role. My portfolio combines LangGraph approval workflows, MCP permissions and an extractive RAG service with reproducible evaluations. I hold an MS in Data Engineering from the University of North Texas.
+
+Lakehouse Guardian uses LangGraph to pause a data-quality workflow for human approval bound to a proposal hash. Spark transforms 17,379 UCI Bike Sharing observations into local Iceberg snapshots, with dbt checks before publication. Across 21 controlled fault batches, row detection precision was 1.00 and recall 0.80; plausible count inflation remained a miss. Real Airflow execution and Terraform S3/Glue validation pass CI. AWS infrastructure has not been deployed; this is a local reference system, not a learned autonomous planner.
+https://github.com/Sunnyvulli/lakehouse-guardian
+
+Catalog Sentinel exposes two read-only MCP tools with strict schemas, host-assigned permissions, bounded SQLite queries and hashed audit records. Its actual stdio evaluation enforced all 13 expected denials across 16 requests and left database bytes unchanged. This demonstrates local tool enforcement, not remote authentication or resistance to model-level prompt injection.
+https://github.com/Sunnyvulli/catalog-sentinel
+
+Evidence Ledger RAG adds incremental indexing, hybrid retrieval, cited extracts and 18 tests. On 14 authored queries, expected-file hit@3 was 11/14 for hybrid retrieval and 10/14 for BM25. This small development set does not establish general superiority. The lexical support guard flagged three of five unsupported probes and missed two meaning changes; exact extract provenance does not prove answer faithfulness.
+https://github.com/Sunnyvulli/evidence-ledger-rag
+
+My data-engineering foundation includes AWS ingestion, SQL validation and Java/Spring Boot services. Mobility Quality Lab has 13 passing tests and a reproducible historical backtest. My Applied ML Research Suite adds citation-support and robustness experiments with explicit negative results; its writing is unpublished.
+
+I would welcome the opportunity to discuss these implementations, their failure cases and how I would evaluate them against your team's requirements.
+
+Sincerely,
+Hanumantha Rao Vulli
