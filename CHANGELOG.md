@@ -50,3 +50,9 @@ This is a documented content version; a GitHub release/tag has not been created.
 - Add discovered-test-count, dataset-name, and public-phone guards for application-document consistency.
 - Remove the current public PDF phone number, trim unsupported skills, name the UCI Bike Sharing dataset, and focus academic research interests.
 - Retain measured baseline results and honest unpublished status; record missing admissions and employment evidence without placeholders.
+
+### Verified platform projects and career documents, 2026-10-19
+- Added separate, CI-verified Lakehouse Guardian and Catalog Sentinel evidence to the portfolio and application documents.
+- Added Spark, Iceberg, dbt, Airflow, LangGraph, MCP and validated Terraform to the supported project skill set with explicit deployment/security limits.
+- Corrected the career manifest's Mobility test count and added document/project consistency checks.
+- Kept a one-page resume/cover letter; used a two-page academic CV for readable research and experience sections.

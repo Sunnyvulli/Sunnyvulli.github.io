@@ -35,3 +35,8 @@ Actual cloud execution, metadata, pins, releases and owner-evidence collection r
 - Negative checks reject a stale page count, stale resume count, missing dataset name, and a synthetic public phone number. Files restored after each check.
 - Formatter and research-card synchronization pass; all three edited PDFs rendered for visual inspection before publication.
 - Full PR CI, deployment, and published byte verification are required before reporting this change as complete.
+
+## Verified project evidence added, 2026-10-19
+Lakehouse Guardian and Catalog Sentinel are now separate public repositories with green implementation/main CI. The resume/CV/cover letter and portfolio reference the actual local Spark/Iceberg/dbt/LangGraph workflow, real Airflow CI execution, Terraform provider validation, and bounded MCP stdio requests. Terraform is now supported by repository evidence, but no AWS deployment is claimed. TypeScript/MariaDB/Selenium remain omitted. Existing owner-dependent education, certification, employer-outcome and referee gaps are unchanged.
+
+The updated resume remains one page. The academic CV uses a deliberate second page for professional experience, skills and certifications. The hybrid retrieval project is not yet added to application documents because its GitHub publication/CI milestone remains pending.

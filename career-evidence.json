@@ -3,7 +3,7 @@
   "research_repository": "https://github.com/Sunnyvulli/Data-Engineer_AI",
   "research_commit": "e1f8109c318c3148cabecc59666a4d4164e40100",
   "research_test_count": 58,
-  "mobility_test_count": 10,
+  "mobility_test_count": 13,
   "projects": [
     {
       "id": "phishing",
@@ -25,6 +25,44 @@
       "description": "RAPID-inspired GRU versus a frozen forest on matched three-day simulated PLAsTiCC observations.",
       "detail": "One seed; both models missed the two independent targets at the 5% budget. No observed-event performance claim.",
       "url": "https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/results/followup/RECURRENT_REPORT.md"
+    }
+  ],
+  "engineering_projects": [
+    {
+      "id": "lakehouse",
+      "title": "Lakehouse Guardian",
+      "url": "https://github.com/Sunnyvulli/lakehouse-guardian",
+      "source_commit": "a603c9e35bf4f68246c2580cf17dde50cfe9c7a3",
+      "behavioral_tests": 11,
+      "controlled_batches": 21,
+      "row_precision": 1.0,
+      "row_recall": 0.8,
+      "verified_on": "2026-10-19",
+      "scope": "Local Spark/Iceberg/dbt workflow; actual Airflow execution and Terraform validation in CI. No AWS apply or learned planner.",
+      "document_checks": [
+        "Lakehouse Guardian",
+        "21 controlled",
+        "1.00",
+        "0.80",
+        "Terraform"
+      ]
+    },
+    {
+      "id": "mcp",
+      "title": "Catalog Sentinel",
+      "url": "https://github.com/Sunnyvulli/catalog-sentinel",
+      "source_commit": "4deaaee4fe678736b8d3923a5643adbd678b2221",
+      "behavioral_tests": 14,
+      "protocol_requests": 16,
+      "expected_denials": 13,
+      "observed_denials": 13,
+      "verified_on": "2026-10-19",
+      "scope": "Actual local stdio requests with host-assigned roles; no remote authentication or learned-model attack benchmark.",
+      "document_checks": [
+        "Catalog Sentinel",
+        "13 expected denials",
+        "16 requests"
+      ]
     }
   ]
 }
