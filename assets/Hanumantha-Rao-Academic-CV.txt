@@ -24,8 +24,13 @@ https://github.com/Sunnyvulli/catalog-sentinel
 - Read-only MCP tools: 14 behavioral tests; 13 expected denials enforced in 16 requests using actual stdio sessions. Host-assigned permissions, not remote authentication.
 - Local execution and green CI; Terraform S3/Glue configuration validated, not deployed to AWS. No learned planner or model-level attack benchmark.
 
+Evidence Ledger RAG | October 2026 | Extractive retrieval reference
+https://github.com/Sunnyvulli/evidence-ledger-rag
+- Incremental indexing, hybrid lexical retrieval and source-hashed extracts; 18 tests. On 14 authored queries, expected-file hit@3 was 11/14 versus BM25 10/14; no independent relevance labels.
+- Lexical support triage flags 3/5 controlled unsupported claims and misses two meaning changes. Exact cited spans do not establish factual correctness.
+
 Mobility Quality Lab | October 2026 | Technical portfolio
-https://github.com/Sunnyvulli/Sunnyvulli.github.io/tree/main/projects/mobility-quality
+https://github.com/Sunnyvulli/mobility-quality
 - Python/SQLite pipeline and read-only local API for 17,379 historical UCI Bike Sharing observations; data contracts, transactional loading, input hashes, and 13 passing tests.
 
 UNPUBLISHED WRITING AND TEACHING

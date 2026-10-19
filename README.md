@@ -70,3 +70,8 @@ Run `docker compose up --build --wait` to start the local API, then visit http:/
 The [research repository](https://github.com/Sunnyvulli/Data-Engineer_AI) includes executed phishing robustness, citation-support triage, and simulated-transient ranking baselines, with 27 integrity tests, source-data hashes, and measured results. These are separately identified as baselines rather than accepted publications or production systems.
 
 The resume, cover letter, and academic CV include this evidence. Research cards are generated from `career-evidence.json`; `scripts/check_career.py` and `scripts/sync_evidence.py --check` guard document/text and page-content drift. See [the account audit](docs/GITHUB_AUDIT.md) for scope and unresolved boundaries.
+
+## Additional verified engineering
+- [Lakehouse Guardian](https://github.com/Sunnyvulli/lakehouse-guardian): local Spark/Iceberg/dbt workflow, actual Airflow CI and validated Terraform; no AWS apply.
+- [Catalog Sentinel](https://github.com/Sunnyvulli/catalog-sentinel): bounded read-only MCP tools and actual stdio misuse probes.
+- [Evidence Ledger RAG](https://github.com/Sunnyvulli/evidence-ledger-rag): incremental lexical retrieval, cited extracts and retained guard failures; [recorded explorer](https://sunnyvulli.github.io/evidence-ledger-rag/).

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "research_repository": "https://github.com/Sunnyvulli/Data-Engineer_AI",
-  "research_commit": "e1f8109c318c3148cabecc59666a4d4164e40100",
+  "research_commit": "e60cd5cd1afa27ac62319d41a0209bf5b61107f7",
   "research_test_count": 58,
   "mobility_test_count": 13,
   "projects": [
@@ -32,7 +32,7 @@
       "id": "lakehouse",
       "title": "Lakehouse Guardian",
       "url": "https://github.com/Sunnyvulli/lakehouse-guardian",
-      "source_commit": "a603c9e35bf4f68246c2580cf17dde50cfe9c7a3",
+      "source_commit": "e1e5ffb9cd4a2bb9cf04150de721e0d355f7b540",
       "behavioral_tests": 11,
       "controlled_batches": 21,
       "row_precision": 1.0,
@@ -45,13 +45,15 @@
         "1.00",
         "0.80",
         "Terraform"
-      ]
+      ],
+      "release": "v0.1.0",
+      "release_url": "https://github.com/Sunnyvulli/lakehouse-guardian/releases/tag/v0.1.0"
     },
     {
       "id": "mcp",
       "title": "Catalog Sentinel",
       "url": "https://github.com/Sunnyvulli/catalog-sentinel",
-      "source_commit": "4deaaee4fe678736b8d3923a5643adbd678b2221",
+      "source_commit": "ba6c0211d9672ac740c40c913f5bea5781acd1c6",
       "behavioral_tests": 14,
       "protocol_requests": 16,
       "expected_denials": 13,
@@ -62,7 +64,38 @@
         "Catalog Sentinel",
         "13 expected denials",
         "16 requests"
-      ]
+      ],
+      "release": "v0.1.0",
+      "release_url": "https://github.com/Sunnyvulli/catalog-sentinel/releases/tag/v0.1.0"
+    },
+    {
+      "id": "retrieval",
+      "title": "Evidence Ledger RAG",
+      "url": "https://github.com/Sunnyvulli/evidence-ledger-rag",
+      "source_commit": "c8977860368b5509bce847141583ea0bd7964392",
+      "behavioral_tests": 18,
+      "documents": 10,
+      "chunks": 34,
+      "authored_queries": 14,
+      "hybrid_expected_file_hits_at_3": 11,
+      "bm25_expected_file_hits_at_3": 10,
+      "unsupported_probes_flagged": 3,
+      "unsupported_probes_total": 5,
+      "verified_on": "2026-10-19",
+      "scope": "Local extractive answers and lexical hybrid retrieval; authored development labels, no independent faithfulness or learned-generation claim.",
+      "document_checks": [
+        "Evidence Ledger RAG",
+        "18 tests",
+        "14 authored queries",
+        "11/14",
+        "10/14"
+      ],
+      "release": "v0.1.0",
+      "release_url": "https://github.com/Sunnyvulli/evidence-ledger-rag/releases/tag/v0.1.0"
     }
-  ]
+  ],
+  "mobility_repository": "https://github.com/Sunnyvulli/mobility-quality",
+  "mobility_commit": "e313bf0f73bdbdd3221397a29cba061337768c83",
+  "research_integrity_scope": "58 integrity tests and saved-output audits re-executed; no new raw-data/model reproduction.",
+  "mobility_release": "v0.1.0"
 }
