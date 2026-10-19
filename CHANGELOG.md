@@ -61,3 +61,6 @@ This is a documented content version; a GitHub release/tag has not been created.
 - Linked independently verified standalone Mobility and the executed retrieval service across portfolio and career documents.
 - Added authored retrieval-baseline metrics, explicit guard misses, release source commits and a current audit that supersedes historical inventory notes.
 - Kept the resume/letter one page and CV two pages; owner qualifications and unpublished status are unchanged.
+
+### Resume presentation
+- Refined one-page resume typography, role/project hierarchy and section separators with embedded fonts and selectable text; preserved career facts and clickable repository links.
