@@ -43,7 +43,7 @@ def main():
     ):
         if not line:
             continue
-        if line == "PROFESSIONAL EXPERIENCE":
+        if line == "UNPUBLISHED WRITING AND TEACHING":
             flow.append(PageBreak())
         kind = (
             "name"

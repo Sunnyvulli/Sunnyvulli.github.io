@@ -75,3 +75,8 @@ Whole-day rolling-origin evaluation with a lag-aware seasonal baseline, then bro
 ### LinkedIn contact synchronization — 2026-10-19
 - Issue #19: added the owner-supplied LinkedIn profile to the portfolio footer and all three application document contact blocks. Source URL: https://www.linkedin.com/in/hanumantharaovulli/ .
 - Rebuilt and visually inspected all four PDF pages; adjusted section/paragraph spacing to retain one-page resume, one-page cover letter and two-page CV. Verified exact source-text parity, clickable URL annotations, 42 portfolio links, unchanged career claims, formatter and evidence synchronization.
+
+### Owner-supplied education history — 2026-10-19
+- Added B.Tech Computer Science and Engineering, KKR and KSR Institute of Technology and Sciences, Guntur (2019–2022) to the resume and portfolio. Added the diploma in Mechanical Engineering, Kallam Haranadhareddy Institute of Technology, Guntur (2016–2019) to the portfolio; the academic CV records both and SSC, Oxford Concept High School, Guntur (2015–2016).
+- Source: owner-provided details in this session; no grades, awarding university, attendance months or MS research component inferred. Resume prioritizes tertiary degree relevance; CV retains full supplied history.
+- Rendered and visually inspected the one-page resume and both CV pages; source/PDF text, links, project evidence and 1/1/2 document page counts pass. Cover letter and six-line profile remain consistent and need no rewrite. Grades and the MS research-component confirmation remain owner gaps.
