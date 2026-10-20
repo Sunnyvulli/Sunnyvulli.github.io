@@ -42,7 +42,7 @@ https://github.com/Sunnyvulli/mobility-quality
 - Python/SQLite pipeline and read-only local API for 17,379 historical UCI Bike Sharing observations; data contracts, transactional loading, input hashes, and 13 passing tests.
 
 UNPUBLISHED WRITING AND TEACHING
-Source Recall Does Not Guarantee Transfer: A Reproducible Audit of Evidence-Support Triage | Manuscript draft for author review, October 2026; not peer-reviewed or accepted.
+Length Baselines and Evidence-Support Triage: An ALCE-to-RAGTruth Audit | Manuscript draft for author review, October 2026; not peer-reviewed or accepted.
 Data contracts and evaluation leakage in historical bike-rental analytics | Technical manuscript draft, October 2026; not peer-reviewed.
 Reliable analytics from real observations | SQL/Python teaching sample with exercises, answer key, and assessment rubric.
 
