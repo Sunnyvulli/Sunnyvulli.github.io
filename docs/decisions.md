@@ -40,3 +40,7 @@ Primary reference for ADR 008: [SQLite transaction control](https://www.sqlite.o
 
 ## ADR 012: Strengthen analytical depth before adding project breadth
 **Status:** accepted, 2026-10-19. Prioritize an explicit dimensional mart and executed reconciliation/failure checks inside Lakehouse Guardian. The dataset supports date/hour facts and date/weather reference dimensions, not invented customer/station entities or SCD2 history. Keep the temporary full-refresh mart distinct from CDC, distributed scale and cloud operation. External human review is invited through a public issue and remains pending until an actual reviewer supplies feedback; automated checks and self-review do not constitute peer review. Career materials should reflect the verified test count/model scope only after the implementation CI passes.
+
+## Citation interpretation and synchronized manuscript identity — 2026-10-20
+**Decision:** frame the citation audit around the observed adequacy of trivial length controls, and preserve the original source-transfer protocol as historical context. Report raw and within-generator length/NLI scores symmetrically; label outcome-driven reframing and target-rank normalization as post hoc and transductive.
+**Trade-off:** useful negative evidence without turning untested statistical superiority, semantic ability or causal effects into career claims. Keep stable canonical manuscript URLs and update the CV's exact title; accurate general resume/letter descriptions need no rewrite.

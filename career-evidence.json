@@ -16,7 +16,7 @@
       "id": "checkpoints",
       "title": "Citation-support checkpoints",
       "description": "ALCE sentence-level transfer and independent RAGTruth evaluation on 900 answers from 150 question groups.",
-      "detail": "Source-only thresholds expose missed unsupported answers and high review burden. A manuscript draft is available; not peer reviewed.",
+      "detail": "Post-hoc length and within-generator controls do not establish an advantage for the tested evidence-reading scores. Manuscript draft; not peer reviewed.",
       "url": "https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/docs/paper/MANUSCRIPT.md"
     },
     {
