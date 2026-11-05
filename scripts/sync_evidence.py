@@ -1,4 +1,4 @@
-"""Render portfolio research cards from the reviewed evidence manifest."""
+"""Render plain-language research summaries from the reviewed evidence manifest."""
 
 import argparse
 import json
@@ -12,18 +12,19 @@ END = "<!-- RESEARCH_CARDS_END -->"
 
 def render():
     evidence = json.loads((ROOT / "career-evidence.json").read_text())
-    cards = []
-    for p in evidence["projects"]:
-        cards.append(
-            '<article class="card"><span class="num">EXECUTED BASELINE</span>'
-            f'<h3>{escape(p["title"])}</h3><p>{escape(p["description"])}</p>'
-            f'<p>{escape(p["detail"])}</p><a class="btn" href="{escape(p["url"], quote=True)}">Methods and evidence ↗</a></article>'
+    entries = []
+    for project in evidence["projects"]:
+        entries.append(
+            '<article class="research-entry"><div>'
+            f'<h3>{escape(project["title"])}</h3>'
+            '<span class="project-type">Independent study</span></div><div>'
+            f'<p>{escape(project["description"])}</p>'
+            "<details><summary>Methods and limitations</summary>"
+            f'<p>{escape(project["detail"])}</p></details>'
+            f'<a class="text-link" href="{escape(project["url"], quote=True)}">Read the study and evidence</a>'
+            "</div></article>"
         )
-    return (
-        '<div class="grid" style="margin-top:28px">'
-        + "".join(cards)
-        + '</div><p style="font-size:12px"><a href="https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/results/SUMMARY.md">Measured results</a> · <a href="https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/docs/PROVENANCE.md">Sources and provenance</a> · <a href="https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/results/followup/REPORT.md">Follow-up validation report</a> · <a href="https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/results/followup/OPEN_COMPARISON_REPORT.md">Open-model and independent-source results</a> · <a href="https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/results/followup/RECURRENT_REPORT.md">Recurrent comparison and observed-data readiness</a></p>'
-    )
+    return "\n" + "\n".join(entries) + "\n"
 
 
 def main():
@@ -33,15 +34,13 @@ def main():
     path = ROOT / "index.html"
     text = path.read_text()
     if text.count(START) != 1 or text.count(END) != 1:
-        raise ValueError("Exactly one pair of research-card markers is required")
+        raise ValueError("Exactly one pair of research markers is required")
     before, rest = text.split(START)
     _, after = rest.split(END)
     updated = before + START + render() + END + after
     if args.check:
         if text != updated:
-            raise SystemExit(
-                "Evidence cards have drifted; run python scripts/sync_evidence.py"
-            )
+            raise SystemExit("Research summaries have drifted; run sync_evidence.py")
     else:
         path.write_text(updated)
 

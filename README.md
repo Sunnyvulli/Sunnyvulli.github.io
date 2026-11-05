@@ -14,7 +14,7 @@ The flagship project uses 17,379 real hourly observations with source/license at
 
 ## Repository layout
 
-- index.html: responsive portfolio with employer and faculty views
+- index.html: plain-language portfolio with research, projects, background and contact sections
 - projects/mobility-quality/: implementation, attributed data, tests, results, design, API, container option
 - research/: manuscript source and PDF
 - teaching/: practical lesson and rubric
@@ -77,3 +77,7 @@ The resume, cover letter, and academic CV include this evidence. Research cards 
 - [Evidence Ledger RAG](https://github.com/Sunnyvulli/evidence-ledger-rag): incremental lexical retrieval, cited extracts and retained guard failures; [recorded explorer](https://sunnyvulli.github.io/evidence-ledger-rag/).
 
 The research CV download is a general two-page academic CV covering AI evaluation, cybersecurity, scientific machine learning and data engineering. It is not tied to a university or research outline. The existing Academic-CV asset path is retained; rebuilding uses its updated text source.
+
+## Plain-language portfolio
+
+The homepage now explains the purpose of each study and project before its tools. Methods and limitations remain available in expandable details. There are no audience switches, terminal demos or animated diagrams. Research summaries are generated from career-evidence.json by scripts/sync_evidence.py. Existing project pages and document download addresses remain available.

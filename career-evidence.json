@@ -8,22 +8,22 @@
     {
       "id": "phishing",
       "title": "Phishing feature robustness",
-      "description": "Grouped robustness and raw-URL studies, plus a paired screenshot/URL benchmark on 7,050 provider-labelled examples.",
-      "detail": "Three seeds: URL ranking exceeded compact image and equal-fusion baselines. Collection and component-size limits remain.",
+      "description": "How well does a phishing detector work when some of the information it relies on is missing? I compare models and study the errors caused by losing website or URL features.",
+      "detail": "Grouped historical-data tests and a paired screenshot/URL study examine feature reliability. In the paired study, URL ranking exceeded compact image and equal-fusion baselines. Dataset and collection limits remain; this does not establish performance on current attacks.",
       "url": "https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/results/validation/REPORT.md"
     },
     {
       "id": "checkpoints",
       "title": "Citation-support checkpoints",
-      "description": "ALCE sentence-level transfer and independent RAGTruth evaluation on 900 answers from 150 question groups.",
-      "detail": "Post-hoc length and within-generator controls do not establish an advantage for the tested evidence-reading scores. Manuscript draft; not peer reviewed.",
+      "description": "When an AI answer includes citations, do those sources actually support it? I compare ways of flagging answers for review and examine simple factors, such as answer length, that can affect the results.",
+      "detail": "Uses ALCE sentence labels and 900 RAGTruth answers from 150 question groups. Length and generator controls complicate claims about the tested evidence-reading scores. The manuscript is a working draft, not peer reviewed.",
       "url": "https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/docs/paper/MANUSCRIPT.md"
     },
     {
       "id": "transients",
       "title": "Early transient prioritisation",
-      "description": "RAPID-inspired GRU versus a frozen forest on matched three-day simulated PLAsTiCC observations.",
-      "detail": "One seed; both models missed the two independent targets at the 5% budget. No observed-event performance claim.",
+      "description": "Can the first few observations help identify which astronomical events deserve closer attention? I compare models that rank simulated events when follow-up resources are limited.",
+      "detail": "A RAPID-inspired GRU and forest model use matched three-day PLAsTiCC observations. In one independent simulated test, both missed the two targets at the 5% follow-up budget. No performance on observed astronomical events is claimed.",
       "url": "https://github.com/Sunnyvulli/Data-Engineer_AI/blob/main/research-suite/results/followup/RECURRENT_REPORT.md"
     }
   ],
