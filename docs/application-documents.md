@@ -25,3 +25,7 @@ Greenhouse. Unsuccessful resume parse. https://support.greenhouse.io/hc/en-us/ar
 
 ## Evidence synchronization
 `career-evidence.json` is the reviewed source for the three research cards. Run `python scripts/sync_evidence.py` after changing it. `--check` fails if the generated cards drift. `python scripts/check_career.py` checks local links, one-page PDFs, extractable reading order against each text source, image absence, and the research-suite reference. GitHub Actions runs these checks on every push and pull request. Employment and qualifications are not automatically inferred from code changes.
+
+## General research CV update
+
+The Academic-CV PDF and plain-text source now contain the general research CV. It includes three Applied ML Research Suite studies and separate evidence-retrieval, data-governance, analytics and application prototypes. The PDF is two A4 pages, uses embedded DejaVu Serif fonts, and preserves clickable source URLs. Public contact details remain email, location and profile links; the existing no-public-phone policy is unchanged. The CV builder uses the SELECTED PROJECTS CONTINUED marker for its page break. Other application documents retain their own formats.

@@ -75,3 +75,5 @@ The resume, cover letter, and academic CV include this evidence. Research cards 
 - [Lakehouse Guardian](https://github.com/Sunnyvulli/lakehouse-guardian): local Spark/Iceberg/dbt workflow, actual Airflow CI and validated Terraform; no AWS apply.
 - [Catalog Sentinel](https://github.com/Sunnyvulli/catalog-sentinel): bounded read-only MCP tools and actual stdio misuse probes.
 - [Evidence Ledger RAG](https://github.com/Sunnyvulli/evidence-ledger-rag): incremental lexical retrieval, cited extracts and retained guard failures; [recorded explorer](https://sunnyvulli.github.io/evidence-ledger-rag/).
+
+The research CV download is a general two-page academic CV covering AI evaluation, cybersecurity, scientific machine learning and data engineering. It is not tied to a university or research outline. The existing Academic-CV asset path is retained; rebuilding uses its updated text source.
