@@ -62,6 +62,16 @@
   }
   .section-label, .project-item .project-category, .project-item::before,
   .topic-inner span::before, .navlinks a:hover { color: var(--accent); }
+  .topic-inner { justify-content: flex-start; align-items: center; gap: 8px 12px; flex-wrap: wrap; }
+  .topic-inner strong { margin-right: 6px; }
+  .topic-inner span {
+    padding: 4px 11px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--ink);
+  }
+  .topic-inner span::before { content: none; }
   .project-type { background: #14283a; color: #a8ddf8; }
   .job .meta, .project-visual figcaption { color: var(--muted); }
   .job::before { background: var(--accent); box-shadow: 0 0 0 4px var(--paper); }
